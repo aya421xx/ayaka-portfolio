@@ -175,3 +175,6 @@
 .hero-sparkle.sparkle-two{bottom:21%;left:12%;font-size:17px;opacity:.6;transform:rotate(-15deg)}
 .hero-sparkle.sparkle-three{bottom:13%;right:8%;font-size:28px;opacity:.67;transform:rotate(8deg)}
 @media(max-width:760px){.hero-sparkle.sparkle-one{top:7%;left:78%;font-size:26px}.hero-sparkle.sparkle-two{bottom:48%;left:8%;font-size:15px}.hero-sparkle.sparkle-three{bottom:9%;right:10%;font-size:22px}}
+
+/* Keep the qualification score together when the line wraps. */
+.qualification-score{display:inline-block;white-space:nowrap}
