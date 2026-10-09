@@ -192,3 +192,14 @@
 @keyframes hero-twinkle{0%,100%{opacity:.12;transform:scale(.65) rotate(-8deg)}25%{opacity:.95;transform:scale(1.12) rotate(4deg)}52%{opacity:.35;transform:scale(.78) rotate(-2deg)}72%{opacity:.85;transform:scale(1) rotate(7deg)}}
 @media(max-width:760px){.hero .hero-sparkle.sparkle-one{top:7%;left:72%}.hero .hero-sparkle.sparkle-two{top:27%;left:7%}.hero .hero-sparkle.sparkle-three{top:44%;left:82%}.hero .hero-sparkle.sparkle-four{top:57%;left:8%}.hero .hero-sparkle.sparkle-five{top:63%;right:8%}.hero .hero-sparkle.sparkle-six{bottom:14%;right:22%}.hero .hero-sparkle.sparkle-seven{bottom:30%;left:50%}}
 @media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none!important;opacity:.65!important;transform:none!important}}
+
+/* More luminous star field; only the falling star translates, always top to bottom. */
+.hero .hero-sparkle{color:#fffdf4;text-shadow:0 0 5px #fff,0 0 14px rgba(255,255,255,.95),0 0 30px rgba(255,244,176,.85);animation-name:hero-glow-only;animation-duration:4.8s;animation-timing-function:ease-in-out}
+.hero .hero-sparkle.sparkle-eight{top:42%;left:27%;font-size:22px;animation-delay:-2.7s}
+.hero .hero-sparkle.sparkle-nine{top:67%;right:14%;font-size:30px;animation-delay:-1.3s}
+.hero .hero-sparkle.sparkle-ten{top:13%;left:56%;font-size:19px;animation-delay:-4s}
+@keyframes hero-glow-only{0%,100%{opacity:.22;transform:scale(.85)}45%{opacity:1;transform:scale(1.22)}70%{opacity:.55;transform:scale(1)}}
+.hero .hero-falling-star{position:absolute;top:-16%;left:65%;font-size:24px;line-height:1;color:#fffdf0;opacity:0;text-shadow:0 0 9px white,0 0 25px rgba(255,246,184,.95);pointer-events:none;animation:hero-fall-down 10s linear infinite;animation-delay:-2s}
+@keyframes hero-fall-down{0%{top:-16%;opacity:0}7%{opacity:1}65%{opacity:.9}85%{opacity:0}100%{top:112%;opacity:0}}
+@media(max-width:760px){.hero .hero-sparkle.sparkle-eight{top:38%;left:26%}.hero .hero-sparkle.sparkle-nine{top:75%;right:9%}.hero .hero-sparkle.sparkle-ten{top:16%;left:48%}.hero .hero-falling-star{left:76%}}
+@media(prefers-reduced-motion:reduce){.hero .hero-falling-star{animation:none!important;display:none!important}}
