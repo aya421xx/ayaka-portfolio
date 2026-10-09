@@ -129,3 +129,10 @@
 
 /* PDF-first Illustrator portfolio item */
 .illustrator-image iframe{display:block;width:100%;height:auto;aspect-ratio:1.5;border:0;background:#fff;pointer-events:none}.illustrator-pdf-link{display:inline-flex;margin-top:12px;color:#235d7d;font-size:13px;text-decoration:underline;text-underline-offset:4px}.illustrator-card .work-description{margin-top:8px}
+
+/* Larger, full-page Illustrator catalog preview without an inner scroll area. */
+.illustrator-grid{grid-template-columns:minmax(0,1fr)}
+.illustrator-grid .illustrator-card{width:100%;max-width:1100px}
+.illustrator-grid .illustrator-image{width:100%;overflow:hidden}
+.illustrator-grid .illustrator-image iframe{width:100%;height:auto;aspect-ratio:1.5;min-height:0;display:block;overflow:hidden;pointer-events:none}
+@media(max-width:760px){.illustrator-grid .illustrator-card{max-width:100%}}
