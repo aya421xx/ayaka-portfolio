@@ -178,3 +178,17 @@
 
 /* Keep the qualification score together when the line wraps. */
 .qualification-score{display:inline-block;white-space:nowrap}
+
+/* Animated eight-point light stars: airy, brighter than the earlier diamond icons. */
+.hero .hero-sparkles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.hero .hero-sparkle{position:absolute;display:block;font-family:Arial,sans-serif;font-weight:300;line-height:1;color:#fffdf1;text-shadow:0 0 9px rgba(255,255,255,.95),0 0 22px rgba(255,249,199,.8);opacity:0;transform-origin:center;animation:hero-twinkle 5.8s ease-in-out infinite}
+.hero .hero-sparkle.sparkle-one{top:17%;left:34%;font-size:40px;animation-delay:-.5s}
+.hero .hero-sparkle.sparkle-two{top:31%;left:8%;font-size:23px;animation-delay:-3.1s}
+.hero .hero-sparkle.sparkle-three{top:58%;left:39%;font-size:30px;animation-delay:-1.7s}
+.hero .hero-sparkle.sparkle-four{top:72%;left:17%;font-size:18px;animation-delay:-4.3s}
+.hero .hero-sparkle.sparkle-five{top:11%;right:9%;font-size:27px;animation-delay:-2.2s}
+.hero .hero-sparkle.sparkle-six{bottom:15%;right:31%;font-size:23px;animation-delay:-3.8s}
+.hero .hero-sparkle.sparkle-seven{bottom:24%;left:48%;font-size:17px;animation-delay:-.9s}
+@keyframes hero-twinkle{0%,100%{opacity:.12;transform:scale(.65) rotate(-8deg)}25%{opacity:.95;transform:scale(1.12) rotate(4deg)}52%{opacity:.35;transform:scale(.78) rotate(-2deg)}72%{opacity:.85;transform:scale(1) rotate(7deg)}}
+@media(max-width:760px){.hero .hero-sparkle.sparkle-one{top:7%;left:72%}.hero .hero-sparkle.sparkle-two{top:27%;left:7%}.hero .hero-sparkle.sparkle-three{top:44%;left:82%}.hero .hero-sparkle.sparkle-four{top:57%;left:8%}.hero .hero-sparkle.sparkle-five{top:63%;right:8%}.hero .hero-sparkle.sparkle-six{bottom:14%;right:22%}.hero .hero-sparkle.sparkle-seven{bottom:30%;left:50%}}
+@media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none!important;opacity:.65!important;transform:none!important}}
