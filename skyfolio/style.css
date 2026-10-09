@@ -281,3 +281,6 @@
 
 /* Softer rose shooting star with a quicker, one-way diagonal pass. */
 .hero .hero-falling-star.shooting-star-two{background:#f6b5bf;filter:drop-shadow(0 0 4px rgba(255,238,242,.9)) drop-shadow(0 0 9px rgba(248,174,187,.65));animation-duration:11s}
+
+/* Keep the prominent top-right star unobstructed: hide overlapping small sparkles. */
+.hero .hero-sparkle.sparkle-five,.hero .hero-sparkle.sparkle-fifty-six{display:none!important}
