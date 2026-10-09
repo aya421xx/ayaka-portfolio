@@ -205,3 +205,17 @@
 .hero .hero-sparkle.sparkle-twenty{bottom:9%;right:12%;font-size:29px;animation-delay:-2.6s}
 .hero .hero-sparkle.sparkle-twenty-one{top:53%;left:12%;font-size:18px;animation-delay:-3.2s}
 @media(max-width:760px){.hero .hero-sparkle.sparkle-sixteen{top:11%;left:24%}.hero .hero-sparkle.sparkle-seventeen{top:39%;left:51%}.hero .hero-sparkle.sparkle-eighteen{top:83%;left:42%}.hero .hero-sparkle.sparkle-nineteen{top:23%;right:12%}.hero .hero-sparkle.sparkle-twenty{bottom:11%;right:14%}.hero .hero-sparkle.sparkle-twenty-one{top:54%;left:10%}}
+
+/* Twelve extra small and medium gold stars: stationary twinkle only. */
+.hero .hero-sparkle.sparkle-twenty-two{top:5%;left:8%;font-size:15px;animation-delay:-1.4s}
+.hero .hero-sparkle.sparkle-twenty-three{top:15%;left:57%;font-size:24px;animation-delay:-3.1s}
+.hero .hero-sparkle.sparkle-twenty-four{top:26%;left:72%;font-size:17px;animation-delay:-2.2s}
+.hero .hero-sparkle.sparkle-twenty-five{top:34%;left:35%;font-size:21px;animation-delay:-4.6s}
+.hero .hero-sparkle.sparkle-twenty-six{top:44%;left:7%;font-size:14px;animation-delay:-0.8s}
+.hero .hero-sparkle.sparkle-twenty-seven{top:55%;left:85%;font-size:26px;animation-delay:-3.8s}
+.hero .hero-sparkle.sparkle-twenty-eight{top:63%;left:57%;font-size:18px;animation-delay:-1.7s}
+.hero .hero-sparkle.sparkle-twenty-nine{top:73%;left:70%;font-size:23px;animation-delay:-4.1s}
+.hero .hero-sparkle.sparkle-thirty{top:82%;left:22%;font-size:16px;animation-delay:-2.8s}
+.hero .hero-sparkle.sparkle-thirty-one{top:87%;left:54%;font-size:20px;animation-delay:-0.3s}
+.hero .hero-sparkle.sparkle-thirty-two{top:39%;left:92%;font-size:15px;animation-delay:-3.4s}
+.hero .hero-sparkle.sparkle-thirty-three{top:68%;left:4%;font-size:19px;animation-delay:-2.5s}
