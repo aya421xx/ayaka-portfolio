@@ -166,61 +166,33 @@
 #ai-image .ai-image-card.is-prompt .ai-image-next img{max-width:48%!important}
 @media(max-width:760px){#ai-image .ai-image-grid,#illustrator .illustrator-grid{grid-template-columns:minmax(0,1fr)!important}#ai-image .ai-image-card .ai-image-next{height:clamp(270px,70vw,420px)!important}}
 
-/* Subtle golden sparkles in the hero background, echoing the travel collage. */
-.hero-sparkles{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.hero-copy,.hero-art,.hero-bottom{z-index:1}
-.hero-copy{position:relative}
-.hero-sparkle{position:absolute;display:block;color:#fff4b4;opacity:.76;font-family:Georgia,serif;line-height:1;text-shadow:0 1px 10px rgba(255,255,255,.45)}
-.hero-sparkle.sparkle-one{top:16%;left:37%;font-size:34px;transform:rotate(12deg)}
-.hero-sparkle.sparkle-two{bottom:21%;left:12%;font-size:17px;opacity:.6;transform:rotate(-15deg)}
-.hero-sparkle.sparkle-three{bottom:13%;right:8%;font-size:28px;opacity:.67;transform:rotate(8deg)}
-@media(max-width:760px){.hero-sparkle.sparkle-one{top:7%;left:78%;font-size:26px}.hero-sparkle.sparkle-two{bottom:48%;left:8%;font-size:15px}.hero-sparkle.sparkle-three{bottom:9%;right:10%;font-size:22px}}
-
 /* Keep the qualification score together when the line wraps. */
 .qualification-score{display:inline-block;white-space:nowrap}
 
-/* Animated eight-point light stars: airy, brighter than the earlier diamond icons. */
-.hero .hero-sparkles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
-.hero .hero-sparkle{position:absolute;display:block;font-family:Arial,sans-serif;font-weight:300;line-height:1;color:#fffdf1;text-shadow:0 0 9px rgba(255,255,255,.95),0 0 22px rgba(255,249,199,.8);opacity:0;transform-origin:center;animation:hero-twinkle 5.8s ease-in-out infinite}
-.hero .hero-sparkle.sparkle-one{top:17%;left:34%;font-size:40px;animation-delay:-.5s}
-.hero .hero-sparkle.sparkle-two{top:31%;left:8%;font-size:23px;animation-delay:-3.1s}
-.hero .hero-sparkle.sparkle-three{top:58%;left:39%;font-size:30px;animation-delay:-1.7s}
-.hero .hero-sparkle.sparkle-four{top:72%;left:17%;font-size:18px;animation-delay:-4.3s}
-.hero .hero-sparkle.sparkle-five{top:11%;right:9%;font-size:27px;animation-delay:-2.2s}
-.hero .hero-sparkle.sparkle-six{bottom:15%;right:31%;font-size:23px;animation-delay:-3.8s}
-.hero .hero-sparkle.sparkle-seven{bottom:24%;left:48%;font-size:17px;animation-delay:-.9s}
-@keyframes hero-twinkle{0%,100%{opacity:.12;transform:scale(.65) rotate(-8deg)}25%{opacity:.95;transform:scale(1.12) rotate(4deg)}52%{opacity:.35;transform:scale(.78) rotate(-2deg)}72%{opacity:.85;transform:scale(1) rotate(7deg)}}
-@media(max-width:760px){.hero .hero-sparkle.sparkle-one{top:7%;left:72%}.hero .hero-sparkle.sparkle-two{top:27%;left:7%}.hero .hero-sparkle.sparkle-three{top:44%;left:82%}.hero .hero-sparkle.sparkle-four{top:57%;left:8%}.hero .hero-sparkle.sparkle-five{top:63%;right:8%}.hero .hero-sparkle.sparkle-six{bottom:14%;right:22%}.hero .hero-sparkle.sparkle-seven{bottom:30%;left:50%}}
-@media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none!important;opacity:.65!important;transform:none!important}}
 
-/* More luminous star field; only the falling star translates, always top to bottom. */
-.hero .hero-sparkle{color:#fffdf4;text-shadow:0 0 5px #fff,0 0 14px rgba(255,255,255,.95),0 0 30px rgba(255,244,176,.85);animation-name:hero-glow-only;animation-duration:4.8s;animation-timing-function:ease-in-out}
-.hero .hero-sparkle.sparkle-eight{top:42%;left:27%;font-size:22px;animation-delay:-2.7s}
-.hero .hero-sparkle.sparkle-nine{top:67%;right:14%;font-size:30px;animation-delay:-1.3s}
-.hero .hero-sparkle.sparkle-ten{top:13%;left:56%;font-size:19px;animation-delay:-4s}
-@keyframes hero-glow-only{0%,100%{opacity:.22;transform:scale(.85)}45%{opacity:1;transform:scale(1.22)}70%{opacity:.55;transform:scale(1)}}
-.hero .hero-falling-star{position:absolute;top:-16%;left:65%;font-size:24px;line-height:1;color:#fffdf0;opacity:0;text-shadow:0 0 9px white,0 0 25px rgba(255,246,184,.95);pointer-events:none;animation:hero-fall-down 10s linear infinite;animation-delay:-2s}
-@keyframes hero-fall-down{0%{top:-16%;opacity:0}7%{opacity:1}65%{opacity:.9}85%{opacity:0}100%{top:112%;opacity:0}}
-@media(max-width:760px){.hero .hero-sparkle.sparkle-eight{top:38%;left:26%}.hero .hero-sparkle.sparkle-nine{top:75%;right:9%}.hero .hero-sparkle.sparkle-ten{top:16%;left:48%}.hero .hero-falling-star{left:76%}}
-@media(prefers-reduced-motion:reduce){.hero .hero-falling-star{animation:none!important;display:none!important}}
-
-/* Final star direction: exactly one traveling star, top-left to bottom-right. */
-.hero .hero-sparkle{color:#fff6bb!important;text-shadow:0 0 5px #fff,0 0 14px rgba(255,247,186,.98),0 0 30px rgba(246,215,112,.82)!important}
-.hero .hero-sparkle.sparkle-one{font-size:48px}.hero .hero-sparkle.sparkle-two{font-size:29px}.hero .hero-sparkle.sparkle-three{font-size:37px}.hero .hero-sparkle.sparkle-four{font-size:25px}.hero .hero-sparkle.sparkle-five{font-size:35px}.hero .hero-sparkle.sparkle-six{font-size:30px}.hero .hero-sparkle.sparkle-seven{font-size:23px}.hero .hero-sparkle.sparkle-eight{font-size:29px}.hero .hero-sparkle.sparkle-nine{font-size:39px}.hero .hero-sparkle.sparkle-ten{font-size:26px}
-.hero .hero-falling-star{top:0!important;left:0!important;right:auto!important;bottom:auto!important;font-size:43px!important;color:#ffe99b!important;text-shadow:0 0 7px #fff,0 0 19px #fff4bd,0 0 35px rgba(255,215,96,.95)!important;animation:hero-diagonal-fall 11s linear infinite!important;animation-delay:-1s!important;will-change:transform,opacity}
-@keyframes hero-diagonal-fall{0%{transform:translate(-70px,-70px);opacity:0}8%{opacity:1}78%{opacity:1}93%{opacity:0}100%{transform:translate(calc(100vw + 80px),calc(100vh + 80px));opacity:0}}
-@media(max-width:760px){.hero .hero-falling-star{font-size:32px!important}}
-@media(prefers-reduced-motion:reduce){.hero .hero-falling-star{animation:none!important;display:none!important}}
-
-/* Hero sparkle refinement: static horizontal positions, varied sizes, richer golden glow. */
-.hero .hero-sparkle{animation:hero-glow-only 4.8s ease-in-out infinite!important;filter:drop-shadow(0 0 8px rgba(255,238,163,.75));}
-.hero .hero-sparkle.sparkle-eleven{top:23%;left:19%;font-size:19px;animation-delay:-1.2s!important}
-.hero .hero-sparkle.sparkle-twelve{top:48%;right:24%;font-size:44px;animation-delay:-3.5s!important}
-.hero .hero-sparkle.sparkle-thirteen{bottom:19%;left:35%;font-size:20px;animation-delay:-2.3s!important}
-.hero .hero-sparkle.sparkle-fourteen{top:8%;left:44%;font-size:34px;animation-delay:-4.4s!important}
-.hero .hero-sparkle.sparkle-fifteen{bottom:32%;right:6%;font-size:18px;animation-delay:-.6s!important}
-/* The single moving star falls vertically only: no horizontal translation at any keyframe. */
-.hero .hero-falling-star{left:54%!important;top:-14%!important;right:auto!important;animation:hero-vertical-fall 11s linear infinite!important;animation-delay:-1s!important}
-@keyframes hero-vertical-fall{0%{transform:translateY(0);opacity:0}8%{opacity:1}75%{opacity:1}94%{opacity:0}100%{transform:translateY(130vh);opacity:0}}
-@media(max-width:760px){.hero .hero-falling-star{left:76%!important}.hero .hero-sparkle.sparkle-eleven{top:22%;left:20%}.hero .hero-sparkle.sparkle-twelve{top:48%;right:12%;font-size:34px}.hero .hero-sparkle.sparkle-thirteen{bottom:21%;left:28%}.hero .hero-sparkle.sparkle-fourteen{top:9%;left:44%}.hero .hero-sparkle.sparkle-fifteen{bottom:35%;right:8%}}
-@media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none!important;opacity:.75!important}.hero .hero-falling-star{animation:none!important;display:none!important}}
+/* Unified Mood Board-style eight-ray stars: no legacy star animation overrides. */
+.hero .hero-sparkles{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.hero .hero-copy,.hero .hero-art,.hero .hero-bottom{position:relative;z-index:1}
+.hero .hero-sparkle,.hero .hero-falling-star{position:absolute;display:block;width:1em;height:1em;font-size:30px;line-height:1;color:transparent;font-family:Arial,sans-serif;background:#f3d06b;clip-path:polygon(50% 0%,55% 38%,85% 15%,62% 44%,100% 50%,62% 56%,85% 85%,56% 62%,50% 100%,44% 62%,15% 85%,38% 56%,0% 50%,38% 44%,15% 15%,44% 38%);opacity:.85;transform-origin:center}
+.hero .hero-sparkle{animation:hero-moodboard-glimmer 5.2s ease-in-out infinite}
+.hero .hero-sparkle.sparkle-one{top:17%;left:34%;font-size:48px;animation-delay:-.5s}
+.hero .hero-sparkle.sparkle-two{top:31%;left:8%;font-size:29px;animation-delay:-3.1s}
+.hero .hero-sparkle.sparkle-three{top:58%;left:39%;font-size:37px;animation-delay:-1.7s}
+.hero .hero-sparkle.sparkle-four{top:72%;left:17%;font-size:25px;animation-delay:-4.3s}
+.hero .hero-sparkle.sparkle-five{top:11%;right:9%;font-size:35px;animation-delay:-2.2s}
+.hero .hero-sparkle.sparkle-six{bottom:15%;right:31%;font-size:30px;animation-delay:-3.8s}
+.hero .hero-sparkle.sparkle-seven{bottom:24%;left:48%;font-size:23px;animation-delay:-.9s}
+.hero .hero-sparkle.sparkle-eight{top:42%;left:27%;font-size:29px;animation-delay:-2.7s}
+.hero .hero-sparkle.sparkle-nine{top:67%;right:14%;font-size:39px;animation-delay:-1.3s}
+.hero .hero-sparkle.sparkle-ten{top:13%;left:56%;font-size:26px;animation-delay:-4s}
+.hero .hero-sparkle.sparkle-eleven{top:23%;left:19%;font-size:19px;animation-delay:-1.2s}
+.hero .hero-sparkle.sparkle-twelve{top:48%;right:24%;font-size:44px;animation-delay:-3.5s}
+.hero .hero-sparkle.sparkle-thirteen{bottom:19%;left:35%;font-size:20px;animation-delay:-2.3s}
+.hero .hero-sparkle.sparkle-fourteen{top:8%;left:44%;font-size:34px;animation-delay:-4.4s}
+.hero .hero-sparkle.sparkle-fifteen{bottom:32%;right:6%;font-size:18px;animation-delay:-.6s}
+@keyframes hero-moodboard-glimmer{0%,100%{opacity:.42;transform:scale(.87)}45%{opacity:1;transform:scale(1.12)}70%{opacity:.65;transform:scale(1)}}
+/* Only one star travels, from the upper-left edge to the lower-right edge. */
+.hero .hero-falling-star{top:0;left:0;font-size:43px;background:#e3ad38;opacity:0;animation:hero-moodboard-diagonal 12s linear infinite}
+@keyframes hero-moodboard-diagonal{0%{top:-8%;left:-5%;opacity:0}9%{opacity:.98}80%{opacity:.98}96%{opacity:0}100%{top:105%;left:105%;opacity:0}}
+@media(max-width:760px){.hero .hero-sparkle.sparkle-one{top:7%;left:72%}.hero .hero-sparkle.sparkle-two{top:27%;left:7%}.hero .hero-sparkle.sparkle-three{top:44%;left:82%}.hero .hero-sparkle.sparkle-four{top:57%;left:8%}.hero .hero-sparkle.sparkle-five{top:63%;right:8%}.hero .hero-sparkle.sparkle-six{bottom:14%;right:22%}.hero .hero-sparkle.sparkle-seven{bottom:30%;left:50%}.hero .hero-sparkle.sparkle-eight{top:38%;left:26%}.hero .hero-sparkle.sparkle-nine{top:75%;right:9%}.hero .hero-sparkle.sparkle-ten{top:16%;left:48%}.hero .hero-sparkle.sparkle-eleven{top:22%;left:20%}.hero .hero-sparkle.sparkle-twelve{top:48%;right:12%;font-size:34px}.hero .hero-sparkle.sparkle-thirteen{bottom:21%;left:28%}.hero .hero-sparkle.sparkle-fourteen{top:9%;left:44%}.hero .hero-sparkle.sparkle-fifteen{bottom:35%;right:8%}.hero .hero-falling-star{font-size:32px}}
+@media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none;opacity:.85;transform:none}.hero .hero-falling-star{animation:none;display:none}}
