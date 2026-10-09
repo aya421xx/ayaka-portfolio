@@ -70,3 +70,10 @@
 .ai-image-card .work-image img,.ai-image-card .work-image:hover img{transform:none;transition:none}
 .ai-image-card .view{display:none}
 @media(max-width:760px){.ai-image-card{width:25%}}
+
+/* Click-to-advance AI artwork sequence; retain existing compact artwork size. */
+.ai-image-card .ai-image-next{display:block;position:relative;width:100%;cursor:pointer}
+.ai-image-card .ai-image-next img{display:block;width:100%;height:auto;object-fit:contain;aspect-ratio:auto;transform:none!important;transition:none!important}
+.ai-image-hover-hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);white-space:nowrap;max-width:calc(100% - 12px);font-size:clamp(8px,.9vw,11px);padding:7px 10px;border-radius:30px;background:rgba(255,255,255,.94);color:#193d55;opacity:0;pointer-events:none;transition:opacity .2s}
+.ai-image-next:hover .ai-image-hover-hint,.ai-image-next:focus-visible .ai-image-hover-hint{opacity:1}
+.ai-image-caption{font-size:12px;color:#668ca3;margin:12px 0 0}
