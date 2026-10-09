@@ -279,16 +279,5 @@
 .hero .hero-falling-star.shooting-star-two{background:#ef7884;filter:drop-shadow(0 0 4px rgba(255,225,228,.95)) drop-shadow(0 0 10px rgba(244,107,127,.8))}
 @media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none;opacity:.8;transform:none}.hero .hero-falling-star{animation:none;display:none}}
 
-/* Oct 10 polish: separate top-right stars, mix pale yellow, restore white comets. */
-.hero .hero-sparkle.sparkle-fifty-six{top:6%;left:75%;font-size:17px}
-.hero .hero-sparkle.sparkle-five{top:10%;right:5%;font-size:35px}
-.hero .hero-sparkle.sparkle-forty-five{top:31%;left:94%;font-size:15px}
-/* Lighter lemon stars add depth among the warm gold stars. */
-.hero .hero-sparkle:is(.sparkle-two,.sparkle-four,.sparkle-seven,.sparkle-ten,.sparkle-thirteen,.sparkle-sixteen,.sparkle-nineteen,.sparkle-twenty-two,.sparkle-twenty-five,.sparkle-twenty-eight,.sparkle-thirty-one,.sparkle-thirty-four,.sparkle-thirty-seven,.sparkle-forty,.sparkle-forty-three,.sparkle-forty-six,.sparkle-forty-nine,.sparkle-fifty-two,.sparkle-fifty-five){background:#ffeaa0}
-.hero .hero-sparkle:is(.sparkle-six,.sparkle-twelve,.sparkle-eighteen,.sparkle-twenty-four,.sparkle-thirty,.sparkle-thirty-six,.sparkle-forty-two,.sparkle-fifty){background:#fff2bd}
-/* Gentle two-peak shimmer, never hard on/off flashing. */
-.hero .hero-sparkle{animation-duration:4.2s;filter:drop-shadow(0 0 3px rgba(255,242,168,.45))}
-@keyframes hero-moodboard-glimmer{0%,100%{opacity:.43;transform:scale(.91)}24%{opacity:.92;transform:scale(1.08)}48%{opacity:.59;transform:scale(.96)}74%{opacity:1;transform:scale(1.12)}}
-.hero .hero-falling-star.shooting-star-two{background:#f7fbff;filter:drop-shadow(0 0 4px rgba(255,255,255,.95)) drop-shadow(0 0 9px rgba(228,245,255,.85))}
-@media(max-width:760px){.hero .hero-sparkle.sparkle-fifty-six{top:7%;left:69%}.hero .hero-sparkle.sparkle-five{top:15%;right:3%}.hero .hero-sparkle.sparkle-forty-five{top:35%;left:91%}}
-@media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none;opacity:.8;transform:none}}
+/* Softer rose shooting star with a quicker, one-way diagonal pass. */
+.hero .hero-falling-star.shooting-star-two{background:#f6b5bf;filter:drop-shadow(0 0 4px rgba(255,238,242,.9)) drop-shadow(0 0 9px rgba(248,174,187,.65));animation-duration:11s}
