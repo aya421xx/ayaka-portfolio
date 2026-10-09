@@ -258,3 +258,23 @@
 
 /* Only the three moving stars use a soft white shooting-star glow. */
 .hero .hero-falling-star,.hero .hero-falling-star.shooting-star-two,.hero .hero-falling-star.shooting-star-three{background:#f7fbff;filter:drop-shadow(0 0 4px rgba(255,255,255,.95)) drop-shadow(0 0 9px rgba(228,245,255,.85))}
+
+/* Hero refinement: balanced distribution, gentle extra twinkle, one rosy-red comet. */
+.hero .hero-sparkle.sparkle-forty-six{top:12%;left:32%;font-size:19px}
+.hero .hero-sparkle.sparkle-forty-seven{top:24%;left:64%;font-size:23px}
+.hero .hero-sparkle.sparkle-forty-eight{top:33%;left:7%;font-size:17px}
+.hero .hero-sparkle.sparkle-forty-nine{top:38%;left:78%;font-size:21px}
+.hero .hero-sparkle.sparkle-fifty{top:47%;left:45%;font-size:19px}
+.hero .hero-sparkle.sparkle-fifty-one{top:57%;left:92%;font-size:22px}
+.hero .hero-sparkle.sparkle-fifty-two{top:67%;left:19%;font-size:18px}
+.hero .hero-sparkle.sparkle-fifty-three{top:76%;left:53%;font-size:22px}
+.hero .hero-sparkle.sparkle-fifty-four{top:83%;left:77%;font-size:19px}
+.hero .hero-sparkle.sparkle-fifty-five{top:90%;left:33%;font-size:20px}
+.hero .hero-sparkle.sparkle-fifty-six{top:15%;left:84%;font-size:17px}
+.hero .hero-sparkle.sparkle-fifty-seven{top:60%;left:61%;font-size:19px}
+/* A slightly more noticeable, but still smooth, shimmer without flashing or sudden jumps. */
+.hero .hero-sparkle{animation-duration:4.6s}
+@keyframes hero-moodboard-glimmer{0%,100%{opacity:.48;transform:scale(.93)}50%{opacity:1;transform:scale(1.10)}}
+/* The second comet alone is warm rose-red; the other two remain soft white. */
+.hero .hero-falling-star.shooting-star-two{background:#ef7884;filter:drop-shadow(0 0 4px rgba(255,225,228,.95)) drop-shadow(0 0 10px rgba(244,107,127,.8))}
+@media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none;opacity:.8;transform:none}.hero .hero-falling-star{animation:none;display:none}}
