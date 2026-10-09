@@ -155,3 +155,13 @@
 .profile-personal-note p{margin:0;color:inherit;line-height:2}
 .profile-personal-note p+p{margin-top:12px}
 @media(max-width:760px){.profile-personal-note{margin-top:24px;padding:18px 15px}}
+
+/* Final gallery sizing: match Mood Board's 2-column artwork width. */
+#ai-image .ai-image-grid,#illustrator .illustrator-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:35px!important;align-items:start!important;justify-content:start!important}
+#ai-image .ai-image-grid>.ai-image-card,#ai-image .ai-image-grid>.ai-image-card.is-model-sheet,#ai-image .ai-image-grid>.ai-image-card.is-prompt,#illustrator .illustrator-grid>.illustrator-card{grid-column:auto!important;justify-self:start!important;align-self:start!important;width:100%!important;max-width:100%!important;margin:0!important;min-width:0!important}
+#illustrator .illustrator-card .illustrator-image,#illustrator .illustrator-card .illustrator-image img{display:block;width:100%!important;max-width:100%!important;height:auto!important;object-fit:contain!important;margin:0!important}
+#ai-image .ai-image-card .ai-image-next{display:flex!important;justify-content:flex-start!important;align-items:center!important;width:100%!important;height:clamp(310px,38vw,480px)!important;padding:0!important;margin:0!important}
+#ai-image .ai-image-card .ai-image-next img{display:block!important;width:auto!important;height:auto!important;max-width:48%!important;max-height:100%!important;margin:0 auto 0 0!important;object-fit:contain!important;transform:none!important}
+#ai-image .ai-image-card.is-model-sheet .ai-image-next img{max-width:100%!important}
+#ai-image .ai-image-card.is-prompt .ai-image-next img{max-width:48%!important}
+@media(max-width:760px){#ai-image .ai-image-grid,#illustrator .illustrator-grid{grid-template-columns:minmax(0,1fr)!important}#ai-image .ai-image-card .ai-image-next{height:clamp(270px,70vw,420px)!important}}
