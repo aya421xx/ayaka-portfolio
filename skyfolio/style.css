@@ -88,3 +88,12 @@
 .ai-image-advance span{font-size:20px;line-height:1}
 .ai-image-advance:focus-visible{outline:3px solid #6ba6c8;outline-offset:3px}
 @media(max-width:760px){.ai-image-card.is-model-sheet{width:100%}.ai-image-card.is-prompt{width:85%}.ai-image-card{min-width:0}.ai-image-advance{padding:11px 15px}}
+
+/* Refined AI-image gallery: only model sheet expands; quiet hover cue. */
+.ai-image-card.is-prompt{width:25%}
+.ai-image-card .ai-image-advance{display:none}
+.ai-image-card .ai-image-hover-hint{display:flex;align-items:center;justify-content:center;gap:10px;bottom:14px;left:50%;transform:translateX(-50%);padding:11px 17px;font-size:12px;font-weight:600;letter-spacing:.02em;background:rgba(255,255,255,.97);color:#234f6a;border:1px solid rgba(35,79,106,.15);border-radius:30px;box-shadow:0 5px 20px rgba(15,55,80,.12);opacity:0;transition:opacity .18s ease;pointer-events:none}
+.ai-image-card .ai-image-hover-hint span{font-size:17px}
+.ai-image-card .ai-image-next:hover .ai-image-hover-hint,.ai-image-card .ai-image-next:focus-visible .ai-image-hover-hint{opacity:1}
+.ai-image-card .ai-image-next:hover img{transform:none!important}
+@media(max-width:760px){.ai-image-card.is-prompt{width:25%}.ai-image-card .ai-image-hover-hint{display:none}}
