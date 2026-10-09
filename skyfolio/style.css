@@ -165,3 +165,13 @@
 #ai-image .ai-image-card.is-model-sheet .ai-image-next img{max-width:100%!important}
 #ai-image .ai-image-card.is-prompt .ai-image-next img{max-width:48%!important}
 @media(max-width:760px){#ai-image .ai-image-grid,#illustrator .illustrator-grid{grid-template-columns:minmax(0,1fr)!important}#ai-image .ai-image-card .ai-image-next{height:clamp(270px,70vw,420px)!important}}
+
+/* Subtle golden sparkles in the hero background, echoing the travel collage. */
+.hero-sparkles{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.hero-copy,.hero-art,.hero-bottom{z-index:1}
+.hero-copy{position:relative}
+.hero-sparkle{position:absolute;display:block;color:#fff4b4;opacity:.76;font-family:Georgia,serif;line-height:1;text-shadow:0 1px 10px rgba(255,255,255,.45)}
+.hero-sparkle.sparkle-one{top:16%;left:37%;font-size:34px;transform:rotate(12deg)}
+.hero-sparkle.sparkle-two{bottom:21%;left:12%;font-size:17px;opacity:.6;transform:rotate(-15deg)}
+.hero-sparkle.sparkle-three{bottom:13%;right:8%;font-size:28px;opacity:.67;transform:rotate(8deg)}
+@media(max-width:760px){.hero-sparkle.sparkle-one{top:7%;left:78%;font-size:26px}.hero-sparkle.sparkle-two{bottom:48%;left:8%;font-size:15px}.hero-sparkle.sparkle-three{bottom:9%;right:10%;font-size:22px}}
