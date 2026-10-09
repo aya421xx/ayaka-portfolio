@@ -136,3 +136,16 @@
 .illustrator-grid .illustrator-image{width:100%;overflow:hidden}
 .illustrator-grid .illustrator-image iframe{width:100%;height:auto;aspect-ratio:1.5;min-height:0;display:block;overflow:hidden;pointer-events:none}
 @media(max-width:760px){.illustrator-grid .illustrator-card{max-width:100%}}
+
+/* Portfolio card alignment and consistent artwork sizing (Oct 2026). */
+.ai-image-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:30px;align-items:start}
+.ai-image-grid .ai-image-card,.ai-image-grid .ai-image-card.is-model-sheet,.ai-image-grid .ai-image-card.is-prompt{width:100%!important;max-width:none!important;min-width:0}
+.ai-image-grid .ai-image-next{height:clamp(310px,38vw,480px)!important;justify-content:flex-start!important;align-items:center!important}
+.ai-image-grid .ai-image-next img{max-width:48%!important;margin-left:0!important;margin-right:auto!important}
+.ai-image-grid .ai-image-card.is-model-sheet .ai-image-next img{max-width:100%!important}
+.ai-image-grid .ai-image-card.is-prompt .ai-image-next img{max-width:48%!important}
+.illustrator-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:30px;align-items:start}
+.illustrator-grid .illustrator-card{width:100%!important;max-width:none!important;min-width:0}
+.illustrator-grid .illustrator-image{width:100%}
+.illustrator-grid .illustrator-image img{display:block;width:100%;height:auto;object-fit:contain;transform:none!important}
+@media(max-width:760px){.ai-image-grid,.illustrator-grid{grid-template-columns:1fr!important}.ai-image-grid .ai-image-next{height:clamp(270px,70vw,420px)!important}.ai-image-grid .ai-image-next img,.ai-image-grid .ai-image-card.is-prompt .ai-image-next img{max-width:55%!important}.ai-image-grid .ai-image-card.is-model-sheet .ai-image-next img{max-width:100%!important}}
