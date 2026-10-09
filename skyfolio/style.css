@@ -64,3 +64,9 @@
 .ai-image-grid{grid-template-columns:minmax(0,1fr)}
 .ai-image-card{width:50%;max-width:100%}
 @media(max-width:760px){.ai-image-card{width:50%}}
+
+/* AI image: quarter-width of gallery (half of preceding display), no hover animation. */
+.ai-image-card{width:25%;max-width:100%}
+.ai-image-card .work-image img,.ai-image-card .work-image:hover img{transform:none;transition:none}
+.ai-image-card .view{display:none}
+@media(max-width:760px){.ai-image-card{width:25%}}
