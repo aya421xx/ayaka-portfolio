@@ -108,3 +108,13 @@
 #lightbox .close{position:fixed;top:14px;right:18px;z-index:5;width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:50%;background:#fff;color:#193d55;font-size:30px;line-height:1;box-shadow:0 3px 20px #0003}
 .work-description{margin:14px 0 0;color:#58778a;font-size:13px;line-height:1.9}
 @media(max-width:760px){#lightbox{padding:8px}#lightbox #modal-media img,#lightbox #modal-media video{max-width:calc(100vw - 16px);max-height:calc(100dvh - 28px)}}
+
+/* Stable AI image gallery: changing slides must never reflow or scroll the page. */
+.ai-image-grid{display:block}
+.ai-image-grid .ai-image-card,.ai-image-grid .ai-image-card.is-model-sheet,.ai-image-grid .ai-image-card.is-prompt{width:60%;max-width:100%}
+.ai-image-grid .ai-image-next{display:flex;align-items:center;justify-content:center;width:100%;height:clamp(360px,48vw,540px);padding:0;overflow:hidden;background:transparent;border:0}
+.ai-image-grid .ai-image-next img{display:block;width:auto!important;height:auto!important;max-width:42%!important;max-height:100%!important;object-fit:contain!important;aspect-ratio:auto!important;flex:none;transform:none!important;transition:none!important}
+.ai-image-grid .ai-image-card.is-model-sheet .ai-image-next img{max-width:100%!important}
+.ai-image-grid .ai-image-card.is-prompt .ai-image-next img{max-width:42%!important}
+.ai-image-grid .ai-image-hover-hint{bottom:16px}
+@media(max-width:760px){.ai-image-grid .ai-image-card,.ai-image-grid .ai-image-card.is-model-sheet,.ai-image-grid .ai-image-card.is-prompt{width:100%}.ai-image-grid .ai-image-next{height:clamp(270px,75vw,440px)}.ai-image-grid .ai-image-next img{max-width:42%!important}.ai-image-grid .ai-image-card.is-model-sheet .ai-image-next img{max-width:100%!important}}
