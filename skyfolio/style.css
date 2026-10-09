@@ -59,3 +59,8 @@
 .ai-image-card .work-image{background:#e8f2f8;border-radius:7px}
 .ai-image-card .work-image img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
 @media(max-width:760px){.ai-image-section{padding-top:75px;padding-bottom:75px}.ai-image-grid{grid-template-columns:1fr}}
+
+/* Reduce AI Image 01 display width to approximately half of previous size. */
+.ai-image-grid{grid-template-columns:minmax(0,1fr)}
+.ai-image-card{width:50%;max-width:100%}
+@media(max-width:760px){.ai-image-card{width:50%}}
