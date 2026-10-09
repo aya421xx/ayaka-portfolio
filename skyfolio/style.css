@@ -77,3 +77,14 @@
 .ai-image-hover-hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);white-space:nowrap;max-width:calc(100% - 12px);font-size:clamp(8px,.9vw,11px);padding:7px 10px;border-radius:30px;background:rgba(255,255,255,.94);color:#193d55;opacity:0;pointer-events:none;transition:opacity .2s}
 .ai-image-next:hover .ai-image-hover-hint,.ai-image-next:focus-visible .ai-image-hover-hint{opacity:1}
 .ai-image-caption{font-size:12px;color:#668ca3;margin:12px 0 0}
+
+/* Clear, always-visible gallery controls; larger landscape model sheet. */
+.ai-image-card.is-model-sheet{width:60%}
+.ai-image-card.is-prompt{width:45%}
+.ai-image-card .ai-image-hover-hint{display:none}
+.ai-image-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:14px}
+.ai-image-actions .ai-image-caption{margin:0;font-size:13px}
+.ai-image-advance{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:12px 18px;border:0;border-radius:28px;background:#234f6a;color:white;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 14px #234f6a22}
+.ai-image-advance span{font-size:20px;line-height:1}
+.ai-image-advance:focus-visible{outline:3px solid #6ba6c8;outline-offset:3px}
+@media(max-width:760px){.ai-image-card.is-model-sheet{width:100%}.ai-image-card.is-prompt{width:85%}.ai-image-card{min-width:0}.ai-image-advance{padding:11px 15px}}
