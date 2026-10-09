@@ -196,3 +196,12 @@
 @keyframes hero-moodboard-diagonal{0%{top:-8%;left:-5%;opacity:0}9%{opacity:.98}80%{opacity:.98}96%{opacity:0}100%{top:105%;left:105%;opacity:0}}
 @media(max-width:760px){.hero .hero-sparkle.sparkle-one{top:7%;left:72%}.hero .hero-sparkle.sparkle-two{top:27%;left:7%}.hero .hero-sparkle.sparkle-three{top:44%;left:82%}.hero .hero-sparkle.sparkle-four{top:57%;left:8%}.hero .hero-sparkle.sparkle-five{top:63%;right:8%}.hero .hero-sparkle.sparkle-six{bottom:14%;right:22%}.hero .hero-sparkle.sparkle-seven{bottom:30%;left:50%}.hero .hero-sparkle.sparkle-eight{top:38%;left:26%}.hero .hero-sparkle.sparkle-nine{top:75%;right:9%}.hero .hero-sparkle.sparkle-ten{top:16%;left:48%}.hero .hero-sparkle.sparkle-eleven{top:22%;left:20%}.hero .hero-sparkle.sparkle-twelve{top:48%;right:12%;font-size:34px}.hero .hero-sparkle.sparkle-thirteen{bottom:21%;left:28%}.hero .hero-sparkle.sparkle-fourteen{top:9%;left:44%}.hero .hero-sparkle.sparkle-fifteen{bottom:35%;right:8%}.hero .hero-falling-star{font-size:32px}}
 @media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none;opacity:.85;transform:none}.hero .hero-falling-star{animation:none;display:none}}
+
+/* A few extra small and medium Mood Board stars; all stay in place. */
+.hero .hero-sparkle.sparkle-sixteen{top:8%;left:23%;font-size:21px;animation-delay:-1.8s}
+.hero .hero-sparkle.sparkle-seventeen{top:36%;left:48%;font-size:32px;animation-delay:-3.9s}
+.hero .hero-sparkle.sparkle-eighteen{top:78%;left:42%;font-size:17px;animation-delay:-.7s}
+.hero .hero-sparkle.sparkle-nineteen{top:24%;right:21%;font-size:24px;animation-delay:-4.5s}
+.hero .hero-sparkle.sparkle-twenty{bottom:9%;right:12%;font-size:29px;animation-delay:-2.6s}
+.hero .hero-sparkle.sparkle-twenty-one{top:53%;left:12%;font-size:18px;animation-delay:-3.2s}
+@media(max-width:760px){.hero .hero-sparkle.sparkle-sixteen{top:11%;left:24%}.hero .hero-sparkle.sparkle-seventeen{top:39%;left:51%}.hero .hero-sparkle.sparkle-eighteen{top:83%;left:42%}.hero .hero-sparkle.sparkle-nineteen{top:23%;right:12%}.hero .hero-sparkle.sparkle-twenty{bottom:11%;right:14%}.hero .hero-sparkle.sparkle-twenty-one{top:54%;left:10%}}
