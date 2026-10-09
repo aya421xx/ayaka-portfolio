@@ -246,15 +246,3 @@
 .hero .hero-sparkle{animation-duration:3.4s;filter:drop-shadow(0 0 5px rgba(255,248,195,.85)) drop-shadow(0 0 12px rgba(255,235,140,.6));will-change:opacity,transform,filter}
 @keyframes hero-moodboard-glimmer{0%,100%{opacity:.3;transform:scale(.78);filter:brightness(.9)}18%{opacity:.92;transform:scale(1.12);filter:brightness(1.25)}32%{opacity:.48;transform:scale(.9);filter:brightness(1)}53%{opacity:1;transform:scale(1.24);filter:brightness(1.42)}68%{opacity:.4;transform:scale(.88);filter:brightness(.98)}83%{opacity:.98;transform:scale(1.15);filter:brightness(1.3)}}
 @media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none;opacity:.85;transform:none;filter:none}}
-
-/* Calm starfield: most stars glow steadily, twelve gently twinkle. */
-.hero .hero-sparkle{animation:none;opacity:.72;transform:none;filter:none;will-change:auto}
-.hero .hero-sparkle:is(.sparkle-one,.sparkle-three,.sparkle-six,.sparkle-nine,.sparkle-twelve,.sparkle-fourteen,.sparkle-seventeen,.sparkle-twenty,.sparkle-twenty-four,.sparkle-twenty-nine,.sparkle-thirty-six,.sparkle-forty-four){animation:hero-calm-twinkle 7s ease-in-out infinite;will-change:opacity;transform:none;filter:none}
-@keyframes hero-calm-twinkle{0%,100%{opacity:.52}50%{opacity:1}}
-/* Three shooting stars travel separately; each crosses once, then stays invisible. */
-.hero .hero-falling-star,.hero .hero-falling-star.shooting-star-two,.hero .hero-falling-star.shooting-star-three{animation-name:hero-calm-shooting;animation-duration:24s;animation-timing-function:linear;animation-iteration-count:infinite}
-.hero .hero-falling-star{animation-delay:0s}
-.hero .hero-falling-star.shooting-star-two{animation-delay:-8s}
-.hero .hero-falling-star.shooting-star-three{animation-delay:-16s}
-@keyframes hero-calm-shooting{0%{top:-8%;left:-5%;opacity:0}2%{opacity:.8}24%{opacity:.8}29%{top:105%;left:105%;opacity:0}100%{top:105%;left:105%;opacity:0}}
-@media(prefers-reduced-motion:reduce){.hero .hero-sparkle,.hero .hero-sparkle:is(.sparkle-one,.sparkle-three,.sparkle-six,.sparkle-nine,.sparkle-twelve,.sparkle-fourteen,.sparkle-seventeen,.sparkle-twenty,.sparkle-twenty-four,.sparkle-twenty-nine,.sparkle-thirty-six,.sparkle-forty-four){animation:none;opacity:.72}.hero .hero-falling-star{animation:none;display:none}}
