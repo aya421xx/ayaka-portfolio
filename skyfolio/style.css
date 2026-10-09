@@ -118,3 +118,9 @@
 .ai-image-grid .ai-image-card.is-prompt .ai-image-next img{max-width:42%!important}
 .ai-image-grid .ai-image-hover-hint{bottom:16px}
 @media(max-width:760px){.ai-image-grid .ai-image-card,.ai-image-grid .ai-image-card.is-model-sheet,.ai-image-grid .ai-image-card.is-prompt{width:100%}.ai-image-grid .ai-image-next{height:clamp(270px,75vw,440px)}.ai-image-grid .ai-image-next img{max-width:42%!important}.ai-image-grid .ai-image-card.is-model-sheet .ai-image-next img{max-width:100%!important}}
+
+/* Illustrator portfolio section */
+.illustrator-section{padding-top:95px;padding-bottom:105px;background:#fff}
+.illustrator-grid{margin-top:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
+.illustrator-grid>p{margin:0;color:#7891a1;font-size:14px;line-height:1.9}
+@media(max-width:760px){.illustrator-section{padding-top:70px;padding-bottom:75px}.illustrator-grid{grid-template-columns:1fr}}
