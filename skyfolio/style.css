@@ -124,3 +124,5 @@
 .illustrator-grid{margin-top:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
 .illustrator-grid>p{margin:0;color:#7891a1;font-size:14px;line-height:1.9}
 @media(max-width:760px){.illustrator-section{padding-top:70px;padding-bottom:75px}.illustrator-grid{grid-template-columns:1fr}}
+
+.illustrator-card{width:100%;max-width:620px;min-width:0}.illustrator-image{position:relative;display:block;overflow:hidden;border-radius:4px;background:#fff;cursor:zoom-in}.illustrator-image img{display:block;width:100%;height:auto;object-fit:contain}.illustrator-zoom{position:absolute;right:14px;bottom:14px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#163c54;box-shadow:0 2px 12px #0002}.illustrator-card .work-info{margin-top:15px}
