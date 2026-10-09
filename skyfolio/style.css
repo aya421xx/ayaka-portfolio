@@ -211,3 +211,16 @@
 @keyframes hero-diagonal-fall{0%{transform:translate(-70px,-70px);opacity:0}8%{opacity:1}78%{opacity:1}93%{opacity:0}100%{transform:translate(calc(100vw + 80px),calc(100vh + 80px));opacity:0}}
 @media(max-width:760px){.hero .hero-falling-star{font-size:32px!important}}
 @media(prefers-reduced-motion:reduce){.hero .hero-falling-star{animation:none!important;display:none!important}}
+
+/* Hero sparkle refinement: static horizontal positions, varied sizes, richer golden glow. */
+.hero .hero-sparkle{animation:hero-glow-only 4.8s ease-in-out infinite!important;filter:drop-shadow(0 0 8px rgba(255,238,163,.75));}
+.hero .hero-sparkle.sparkle-eleven{top:23%;left:19%;font-size:19px;animation-delay:-1.2s!important}
+.hero .hero-sparkle.sparkle-twelve{top:48%;right:24%;font-size:44px;animation-delay:-3.5s!important}
+.hero .hero-sparkle.sparkle-thirteen{bottom:19%;left:35%;font-size:20px;animation-delay:-2.3s!important}
+.hero .hero-sparkle.sparkle-fourteen{top:8%;left:44%;font-size:34px;animation-delay:-4.4s!important}
+.hero .hero-sparkle.sparkle-fifteen{bottom:32%;right:6%;font-size:18px;animation-delay:-.6s!important}
+/* The single moving star falls vertically only: no horizontal translation at any keyframe. */
+.hero .hero-falling-star{left:54%!important;top:-14%!important;right:auto!important;animation:hero-vertical-fall 11s linear infinite!important;animation-delay:-1s!important}
+@keyframes hero-vertical-fall{0%{transform:translateY(0);opacity:0}8%{opacity:1}75%{opacity:1}94%{opacity:0}100%{transform:translateY(130vh);opacity:0}}
+@media(max-width:760px){.hero .hero-falling-star{left:76%!important}.hero .hero-sparkle.sparkle-eleven{top:22%;left:20%}.hero .hero-sparkle.sparkle-twelve{top:48%;right:12%;font-size:34px}.hero .hero-sparkle.sparkle-thirteen{bottom:21%;left:28%}.hero .hero-sparkle.sparkle-fourteen{top:9%;left:44%}.hero .hero-sparkle.sparkle-fifteen{bottom:35%;right:8%}}
+@media(prefers-reduced-motion:reduce){.hero .hero-sparkle{animation:none!important;opacity:.75!important}.hero .hero-falling-star{animation:none!important;display:none!important}}
