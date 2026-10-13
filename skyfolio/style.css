@@ -324,3 +324,15 @@
 .hero .hero-sparkle.is-twinkling{animation:hero-random-twinkle .72s ease-in-out 1 both!important}
 @keyframes hero-random-twinkle{0%{opacity:.63;transform:scale(.94);filter:drop-shadow(0 0 0 rgba(255,238,165,0))}42%{opacity:1;transform:scale(1.19);filter:drop-shadow(0 0 7px rgba(255,242,183,.95))}100%{opacity:.63;transform:scale(.94);filter:drop-shadow(0 0 0 rgba(255,238,165,0))}}
 @media(prefers-reduced-motion:reduce){.hero .hero-sparkle.is-twinkling{animation:none!important;opacity:.8;transform:none}}
+
+/* Overlapping two-image neon artwork carousel. */
+#ai-image .ai-neon-card .ai-neon-stack{position:relative;display:block;width:100%;height:clamp(310px,38vw,480px);border:0;background:transparent;padding:18px 22px;cursor:pointer;isolation:isolate}
+#ai-image .ai-neon-stack img{position:absolute;display:block;width:83%;height:74%;max-width:none!important;max-height:none!important;object-fit:cover;border:8px solid #fff;border-radius:12px;box-shadow:0 16px 36px rgba(28,62,82,.18);transition:transform .45s ease,filter .45s ease;pointer-events:none}
+#ai-image .ai-neon-stack .ai-neon-back{right:0;top:13%;transform:rotate(5deg) scale(.95);z-index:1}
+#ai-image .ai-neon-stack .ai-neon-front{left:0;top:7%;transform:rotate(-4deg);z-index:2}
+#ai-image .ai-neon-stack.is-swapped .ai-neon-back{z-index:2;transform:rotate(-4deg) translate(-8%,0) scale(1)}
+#ai-image .ai-neon-stack.is-swapped .ai-neon-front{z-index:1;transform:rotate(5deg) translate(12%,4%) scale(.95)}
+#ai-image .ai-neon-hint{position:absolute;z-index:3;bottom:7px;left:22px;font-size:12px;letter-spacing:.04em;color:#35536a;background:rgba(255,255,255,.88);padding:8px 12px;border-radius:30px;pointer-events:none}
+#ai-image .ai-neon-stack:focus-visible{outline:3px solid #557f9a;outline-offset:4px;border-radius:12px}
+@media(max-width:760px){#ai-image .ai-neon-card .ai-neon-stack{height:clamp(275px,75vw,440px);padding:12px}#ai-image .ai-neon-stack img{border-width:6px;width:84%;height:75%}#ai-image .ai-neon-hint{left:12px}}
+@media(prefers-reduced-motion:reduce){#ai-image .ai-neon-stack img{transition:none}}
