@@ -360,3 +360,13 @@
 #ai-video .ai-video-model-sheet{margin:20px 0 0}
 #ai-video .ai-video-model-sheet img{display:block;width:100%;height:auto;border-radius:8px;background:white}
 #ai-video .ai-video-model-sheet figcaption{margin-top:9px;font-size:12px;color:#648295;text-align:center}
+
+/* AI magazine cover: compact card with full-cover preview and open-to-enlarge. */
+#ai-image .ai-magazine-card .ai-magazine-image{position:relative;display:flex;align-items:center;justify-content:flex-start;width:100%;height:clamp(230px,27vw,345px);overflow:hidden;text-decoration:none;background:transparent;border-radius:8px}
+#ai-image .ai-magazine-image img{display:block;width:auto;max-width:100%;height:100%;max-height:100%;object-fit:contain;object-position:left center;border-radius:5px;box-shadow:0 8px 22px rgba(30,65,85,.13);transition:transform .25s ease}
+#ai-image .ai-magazine-image:hover img{transform:scale(1.025)}
+#ai-image .ai-magazine-image:focus-visible{outline:3px solid #557f9a;outline-offset:3px}
+#ai-image .ai-magazine-hint{position:absolute;bottom:8px;left:8px;padding:7px 11px;background:rgba(255,255,255,.9);border-radius:30px;color:#35536a;font-size:12px}
+@media(max-width:760px){#ai-image .ai-magazine-card .ai-magazine-image{height:clamp(160px,43vw,260px)}}
+@media(max-width:440px){#ai-image .ai-magazine-card .ai-magazine-image{height:clamp(210px,67vw,300px)}}
+@media(prefers-reduced-motion:reduce){#ai-image .ai-magazine-image img{transition:none}}
