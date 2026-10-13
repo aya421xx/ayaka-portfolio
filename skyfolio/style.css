@@ -394,3 +394,18 @@
 #ai-image .ai-kate-card .ai-kate-image{height:clamp(480px,67.5vw,862px)}
 @media(max-width:760px){#ai-image .ai-kate-card .ai-kate-image{height:clamp(340px,95vw,650px)}}
 @media(max-width:440px){#ai-image .ai-kate-card .ai-kate-image{height:clamp(400px,140vw,750px)}}
+
+/* Balanced three-column AI Image showcase: equal preview heights, larger Kate Spade artwork. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:28px!important}
+ #ai-image .ai-kate-card .ai-kate-image,#ai-image .ai-magazine-card .ai-magazine-image,#ai-image .ai-neon-card .ai-neon-stack{height:clamp(370px,34vw,470px)!important;width:100%!important}
+ #ai-image .ai-kate-card .ai-kate-image img,#ai-image .ai-magazine-card .ai-magazine-image img{height:100%!important;width:auto!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:left center!important}
+}
+@media(min-width:441px) and (max-width:760px){
+ #ai-image .ai-kate-card .ai-kate-image,#ai-image .ai-magazine-card .ai-magazine-image{height:clamp(250px,55vw,390px)!important}
+ #ai-image .ai-kate-card .ai-kate-image img,#ai-image .ai-magazine-card .ai-magazine-image img{height:100%!important;width:auto!important;max-width:100%!important;object-fit:contain!important}
+}
+@media(max-width:440px){
+ #ai-image .ai-kate-card .ai-kate-image,#ai-image .ai-magazine-card .ai-magazine-image{height:clamp(330px,115vw,490px)!important}
+ #ai-image .ai-kate-card .ai-kate-image img,#ai-image .ai-magazine-card .ai-magazine-image img{height:100%!important;width:auto!important;max-width:100%!important;object-fit:contain!important}
+}
