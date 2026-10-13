@@ -389,3 +389,8 @@
 #ai-image .ai-kate-placeholder{padding:13px;color:#648295;font-size:12px;line-height:1.8;border-top:1px solid rgba(92,139,165,.14)}
 @media(max-width:760px){#ai-image .ai-kate-card .ai-kate-image{height:clamp(160px,43vw,260px)}}
 @media(max-width:440px){#ai-image .ai-kate-card .ai-kate-image{height:clamp(210px,67vw,300px)}}
+
+/* Enlarge Kate Spade preview about 2.5x while keeping AI Image 01 in the left column. */
+#ai-image .ai-kate-card .ai-kate-image{height:clamp(480px,67.5vw,862px)}
+@media(max-width:760px){#ai-image .ai-kate-card .ai-kate-image{height:clamp(340px,95vw,650px)}}
+@media(max-width:440px){#ai-image .ai-kate-card .ai-kate-image{height:clamp(400px,140vw,750px)}}
