@@ -409,3 +409,17 @@
  #ai-image .ai-kate-card .ai-kate-image,#ai-image .ai-magazine-card .ai-magazine-image{height:clamp(330px,115vw,490px)!important}
  #ai-image .ai-kate-card .ai-kate-image img,#ai-image .ai-magazine-card .ai-magazine-image img{height:100%!important;width:auto!important;max-width:100%!important;object-fit:contain!important}
 }
+
+/* Larger, visually balanced AI Image 02 and 03 previews. */
+@media(min-width:761px){
+ #ai-image .ai-neon-card .ai-neon-stack{padding:0!important;overflow:visible}
+ #ai-image .ai-neon-stack img{width:92%!important;height:79%!important;max-width:none!important;max-height:none!important;object-fit:cover!important}
+ #ai-image .ai-neon-stack .ai-neon-front{left:0!important;top:9%!important}
+ #ai-image .ai-neon-stack .ai-neon-back{right:0!important;top:16%!important}
+ #ai-image .ai-magazine-card .ai-magazine-image{justify-content:center!important}
+ #ai-image .ai-magazine-card .ai-magazine-image img{object-position:center center!important}
+}
+@media(min-width:441px) and (max-width:760px){
+ #ai-image .ai-neon-stack img{width:90%!important;height:78%!important}
+ #ai-image .ai-magazine-card .ai-magazine-image{justify-content:center!important}
+}
