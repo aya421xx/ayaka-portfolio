@@ -318,3 +318,9 @@
 .hero .hero-sparkle.sparkle-fifty-three{top:89%;left:39%;right:auto;bottom:auto;font-size:15px}
 .hero .hero-art .orbit{width:42px;height:42px;right:4%;top:-37px;opacity:.85}
 }
+
+/* Sequential twinkle: JS chooses a different star each time, rather than looping each star. */
+.hero .hero-sparkle{animation:none!important;opacity:.63;transform:scale(.94);transition:none;filter:none}
+.hero .hero-sparkle.is-twinkling{animation:hero-random-twinkle .72s ease-in-out 1 both!important}
+@keyframes hero-random-twinkle{0%{opacity:.63;transform:scale(.94);filter:drop-shadow(0 0 0 rgba(255,238,165,0))}42%{opacity:1;transform:scale(1.19);filter:drop-shadow(0 0 7px rgba(255,242,183,.95))}100%{opacity:.63;transform:scale(.94);filter:drop-shadow(0 0 0 rgba(255,238,165,0))}}
+@media(prefers-reduced-motion:reduce){.hero .hero-sparkle.is-twinkling{animation:none!important;opacity:.8;transform:none}}
