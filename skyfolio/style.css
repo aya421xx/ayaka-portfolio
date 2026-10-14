@@ -528,13 +528,13 @@
  #ai-image .ai-image-grid>.ai-magazine-card{grid-column:1!important;grid-row:1!important}
  #ai-image .ai-image-grid>.ai-neon-card{grid-column:2!important;grid-row:1!important}
  #ai-image .ai-image-grid>.ai-kate-card{grid-column:3!important;grid-row:1!important}
- #ai-image .ai-image-grid>.ai-travel-card{grid-column:3!important;grid-row:2!important}
+ #ai-image .ai-image-grid>.ai-travel-card{grid-column:1!important;grid-row:2!important}
 }
 @media(min-width:441px) and (max-width:760px){
  #ai-image .ai-image-grid>.ai-magazine-card{grid-column:1!important;grid-row:1!important}
  #ai-image .ai-image-grid>.ai-neon-card{grid-column:2!important;grid-row:1!important}
  #ai-image .ai-image-grid>.ai-kate-card{grid-column:1!important;grid-row:2!important}
- #ai-image .ai-image-grid>.ai-travel-card{grid-column:2!important;grid-row:2!important}
+ #ai-image .ai-image-grid>.ai-travel-card{grid-column:1!important;grid-row:2!important}
 }
 @media(max-width:440px){
  #ai-image .ai-image-grid>.ai-image-card{grid-column:1!important;grid-row:auto!important}
