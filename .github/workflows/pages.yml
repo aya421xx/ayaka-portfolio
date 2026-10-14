@@ -41,11 +41,11 @@ jobs:
           html_path = root / 'index.html'
           html = html_path.read_text(encoding='utf-8')
           optimized = {}
-          pattern = re.compile(r'<img\\b[^>]*>', re.I)
+          pattern = re.compile(r'<img\b[^>]*>', re.I)
 
           def optimize(match):
               tag = match.group(0)
-              src_match = re.search(r'\\bsrc="([^"]+)"', tag)
+              src_match = re.search(r'\bsrc="([^"]+)"', tag)
               if not src_match:
                   return tag
               src = src_match.group(1)
