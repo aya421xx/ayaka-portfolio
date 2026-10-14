@@ -11,3 +11,19 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
 
 /* Flip the overlapping Tokyo and Tonami travel posters. */
 (()=>{const button=document.querySelector('.ai-travel-stack');if(!button)return;const card=button.closest('.ai-travel-card');const counter=card.querySelector('.ai-travel-counter');const caption=card.querySelector('.ai-travel-caption');let swapped=false;button.addEventListener('click',()=>{swapped=!swapped;button.classList.toggle('is-swapped',swapped);counter.textContent=swapped?'02 / 02':'01 / 02';caption.textContent=swapped?'TONAMI · 画像をクリックして切り替え':'TOKYO · 画像をクリックして切り替え';button.setAttribute('aria-label',swapped?'東京と砺波のAI画像を切り替える（現在：砺波）':'東京と砺波のAI画像を切り替える（現在：東京）')})})();
+
+/* Open the currently frontmost stacked AI artwork in the existing lightbox. */
+(()=>{document.querySelectorAll('.ai-stack-zoom').forEach(button=>button.addEventListener('click',()=>{
+ const card=button.closest('.ai-image-card');
+ const stack=card.querySelector('.ai-travel-stack, .ai-neon-stack');
+ if(!stack)return;
+ const current=stack.classList.contains('is-swapped')?stack.querySelector('.ai-travel-back, .ai-neon-back'):stack.querySelector('.ai-travel-front, .ai-neon-front');
+ if(!current)return;
+ const media=document.querySelector('#modal-media');
+ const img=document.createElement('img');
+ img.src=current.currentSrc||current.src;
+ img.alt=current.alt;
+ img.decoding='async';
+ media.replaceChildren(img);
+ document.querySelector('#lightbox').showModal();
+}))})();
