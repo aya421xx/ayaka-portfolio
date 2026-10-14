@@ -451,3 +451,10 @@
 #ai-image .ai-travel-front{left:7%;top:2%}
 #ai-image .ai-travel-back{right:7%;top:2%}
 @media(max-width:440px){#ai-image .ai-travel-stack img{max-width:90%!important}}
+
+/* Shooting stars: travel one way from upper-right to lower-left, slightly faster. */
+@keyframes hero-moodboard-diagonal{0%{top:-8%;left:105%;opacity:0}9%{opacity:.98}80%{opacity:.98}96%{opacity:0}100%{top:105%;left:-8%;opacity:0}}
+.hero .hero-falling-star{animation-duration:9.5s}
+.hero .hero-falling-star.shooting-star-two{animation-duration:8.5s}
+.hero .hero-falling-star.shooting-star-three{animation-duration:12s}
+@media(prefers-reduced-motion:reduce){.hero .hero-falling-star{animation:none;display:none}}
