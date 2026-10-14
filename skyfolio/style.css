@@ -570,3 +570,8 @@
  #ai-image .ai-neon-card .ai-neon-stack{display:block!important}
  #ai-image .ai-image-grid>.ai-travel-card{grid-column:1!important;grid-row:2!important}
 }
+
+/* Restore full uncropped AI Image 01 artwork while retaining even grid spacing. */
+#ai-image .ai-kate-card .ai-kate-image{overflow:hidden!important}
+#ai-image .ai-kate-card .ai-kate-image img{width:auto!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center center!important;transform:none!important}
+#ai-image .ai-kate-card .ai-kate-image:hover img{transform:scale(1.02)!important}
