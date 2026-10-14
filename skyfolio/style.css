@@ -486,3 +486,7 @@
 #ai-image .ai-stack-actions .ai-stack-switch,#ai-image .ai-stack-actions .ai-stack-zoom{position:static!important;left:auto!important;bottom:auto!important;right:auto!important;top:auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:none!important;margin:0!important;padding:7px 11px!important;white-space:nowrap!important;border:0!important;border-radius:30px!important;background:rgba(255,255,255,.9)!important;color:#35536a!important;font-family:inherit!important;font-size:12px!important;font-weight:400!important;line-height:normal!important;box-shadow:none!important;cursor:pointer!important}
 #ai-image .ai-stack-actions .ai-stack-switch:hover,#ai-image .ai-stack-actions .ai-stack-zoom:hover{background:#fff!important}
 @media(max-width:760px){#ai-image .ai-stack-actions .ai-stack-switch,#ai-image .ai-stack-actions .ai-stack-zoom{font-size:10px!important;padding:6px 8px!important}}
+
+/* Keep the header navigation right-aligned after removing the wordmark. */
+@media(min-width:761px){.nav #navlinks{margin-left:auto!important;justify-content:flex-end!important}}
+@media(max-width:760px){.nav .menu{margin-left:auto!important}.nav #navlinks{margin-left:0!important}}
