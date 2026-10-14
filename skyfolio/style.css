@@ -458,3 +458,10 @@
 .hero .hero-falling-star.shooting-star-two{animation-duration:8.5s}
 .hero .hero-falling-star.shooting-star-three{animation-duration:12s}
 @media(prefers-reduced-motion:reduce){.hero .hero-falling-star{animation:none;display:none}}
+
+/* AI Image 01 and 03: matching portrait preview size and alignment. */
+@media(min-width:761px){
+ #ai-image .ai-kate-card .ai-kate-image,#ai-image .ai-magazine-card .ai-magazine-image{height:clamp(410px,36vw,510px)!important;justify-content:center!important}
+ #ai-image .ai-kate-card .ai-kate-image img,#ai-image .ai-magazine-card .ai-magazine-image img{height:100%!important;width:auto!important;max-width:100%!important;object-fit:contain!important;object-position:center!important}
+}
+@media(max-width:760px){#ai-image .ai-kate-card .ai-kate-image,#ai-image .ai-magazine-card .ai-magazine-image{justify-content:center!important}}
