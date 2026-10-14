@@ -543,3 +543,13 @@
  #ai-image .ai-image-grid>.ai-kate-card{order:3!important}
  #ai-image .ai-image-grid>.ai-travel-card{order:4!important}
 }
+
+/* Slightly enlarge AI Image 01 only, without changing the card grid. */
+@media(min-width:761px){
+ #ai-image .ai-kate-card .ai-kate-image img{transform:scale(1.12)!important;transform-origin:center center!important}
+ #ai-image .ai-kate-card .ai-kate-image:hover img{transform:scale(1.14)!important}
+}
+@media(max-width:760px){
+ #ai-image .ai-kate-card .ai-kate-image img{transform:scale(1.10)!important;transform-origin:center center!important}
+ #ai-image .ai-kate-card .ai-kate-image:hover img{transform:scale(1.12)!important}
+}
