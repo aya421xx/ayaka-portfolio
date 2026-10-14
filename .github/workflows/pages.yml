@@ -28,6 +28,54 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils
           pdftoppm -f 1 -singlefile -r 150 -png "skyfolio/assets/catalog1.pdf" "skyfolio/assets/illustrator-catalog-preview"
+      - name: Prepare optimized images for web
+        run: |
+          python3 -m pip install --quiet Pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from urllib.parse import unquote
+          from PIL import Image, ImageOps
+          import re
+
+          root = Path('skyfolio')
+          html_path = root / 'index.html'
+          html = html_path.read_text(encoding='utf-8')
+          optimized = {}
+          pattern = re.compile(r'<img\\b[^>]*>', re.I)
+
+          def optimize(match):
+              tag = match.group(0)
+              src_match = re.search(r'\\bsrc="([^"]+)"', tag)
+              if not src_match:
+                  return tag
+              src = src_match.group(1)
+              original = unquote(src.split('?', 1)[0])
+              source = root / original
+              if source.suffix.lower() not in ('.png', '.jpg', '.jpeg') or not source.is_file():
+                  return tag
+              if original not in optimized:
+                  target = source.with_suffix('.webp')
+                  try:
+                      with Image.open(source) as opened:
+                          im = ImageOps.exif_transpose(opened)
+                          im.thumbnail((1600, 1600), Image.Resampling.LANCZOS)
+                          if im.mode not in ('RGB', 'RGBA'):
+                              im = im.convert('RGBA' if 'A' in im.getbands() else 'RGB')
+                          im.save(target, 'WEBP', quality=82, method=5)
+                      optimized[original] = target.relative_to(root).as_posix()
+                      print(f'{original}: {source.stat().st_size:,} -> {target.stat().st_size:,} bytes')
+                  except Exception as exc:
+                      print(f'Skipped {original}: {exc}')
+                      optimized[original] = src
+              result = tag.replace('src="' + src + '"', 'src="' + optimized[original] + '"')
+              if 'loading=' not in result and original != 'assets/travel-hero-collage.png':
+                  result = result.replace('<img ', '<img loading="lazy" decoding="async" ', 1)
+              if original == 'assets/travel-hero-collage.png':
+                  result = result.replace('<img ', '<img fetchpriority="high" decoding="async" ', 1)
+              return result
+
+          html_path.write_text(pattern.sub(optimize, html), encoding='utf-8')
+          PY
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload portfolio files
