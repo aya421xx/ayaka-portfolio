@@ -8,3 +8,6 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
 
 /* Flip the two overlapping neon photos on each click. */
 (()=>{const button=document.querySelector('.ai-neon-stack');if(!button)return;const counter=document.querySelector('.ai-neon-counter');const caption=button.closest('.ai-neon-card').querySelector('.ai-image-caption');let swapped=false;button.addEventListener('click',()=>{swapped=!swapped;button.classList.toggle('is-swapped',swapped);counter.textContent=swapped?'02 / 02':'01 / 02';caption.textContent=swapped?'青いネオンの飲食店 · 画像をクリックして切り替え':'ネオンの街並み · 画像をクリックして切り替え';button.setAttribute('aria-label',swapped?'重なったAI画像を切り替える（現在：青いネオンの飲食店）':'重なったAI画像を切り替える（現在：ネオンの街並み）')})})();
+
+/* Flip the overlapping Tokyo and Tonami travel posters. */
+(()=>{const button=document.querySelector('.ai-travel-stack');if(!button)return;const card=button.closest('.ai-travel-card');const counter=card.querySelector('.ai-travel-counter');const caption=card.querySelector('.ai-travel-caption');let swapped=false;button.addEventListener('click',()=>{swapped=!swapped;button.classList.toggle('is-swapped',swapped);counter.textContent=swapped?'02 / 02':'01 / 02';caption.textContent=swapped?'TONAMI · 画像をクリックして切り替え':'TOKYO · 画像をクリックして切り替え';button.setAttribute('aria-label',swapped?'東京と砺波のAI画像を切り替える（現在：砺波）':'東京と砺波のAI画像を切り替える（現在：東京）')})})();
