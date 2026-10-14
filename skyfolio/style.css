@@ -474,3 +474,9 @@
 /* Match the AI Image 01 / 03 rounded white enlargement label exactly. */
 #ai-image .ai-stack-zoom{appearance:none!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;width:auto!important;min-width:0!important;margin:12px 0 3px!important;padding:7px 11px!important;border:0!important;border-radius:30px!important;background:rgba(255,255,255,.9)!important;color:#35536a!important;font-family:inherit!important;font-size:12px!important;font-weight:400!important;line-height:normal!important;letter-spacing:normal!important;box-shadow:none!important;cursor:pointer!important}
 #ai-image .ai-stack-zoom:hover{background:#fff!important;transform:none!important}
+
+/* Put the switch hint and enlarge button side by side at the bottom of stacked images. */
+#ai-image .ai-travel-card,#ai-image .ai-neon-card{position:relative}
+#ai-image .ai-travel-hint,#ai-image .ai-neon-hint{position:absolute!important;left:8px!important;bottom:10px!important;right:auto!important;z-index:4!important;white-space:nowrap!important;padding:7px 11px!important;font-size:12px!important;line-height:normal!important;border-radius:30px!important;background:rgba(255,255,255,.9)!important}
+#ai-image .ai-travel-card .ai-stack-zoom,#ai-image .ai-neon-card .ai-stack-zoom{position:absolute!important;left:calc(8px + 12.5em)!important;bottom:10px!important;z-index:5!important;margin:0!important;white-space:nowrap!important}
+@media(max-width:760px){#ai-image .ai-travel-hint,#ai-image .ai-neon-hint{font-size:10px!important;padding:6px 8px!important}#ai-image .ai-travel-card .ai-stack-zoom,#ai-image .ai-neon-card .ai-stack-zoom{left:calc(8px + 12.5em)!important;font-size:10px!important;padding:6px 8px!important}}
