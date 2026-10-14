@@ -445,3 +445,9 @@
 #ai-image .ai-travel-stack.is-swapped .ai-travel-front{transform:rotate(3deg) translate(10%,1%) scale(.96)}
 #ai-image .ai-travel-stack.is-swapped .ai-travel-back{transform:rotate(-3deg) translate(-9%,-1%) scale(1)}
 #ai-image .ai-travel-hint{left:3%;bottom:0}
+
+/* Travel posters: eliminate the empty horizontal area created by contain in wide boxes. */
+#ai-image .ai-travel-stack img{width:auto!important;height:96%!important;max-width:90%!important;aspect-ratio:2/3;object-fit:cover!important;object-position:center;border:0!important}
+#ai-image .ai-travel-front{left:7%;top:2%}
+#ai-image .ai-travel-back{right:7%;top:2%}
+@media(max-width:440px){#ai-image .ai-travel-stack img{max-width:90%!important}}
