@@ -437,3 +437,11 @@
 @media(max-width:760px){#ai-image .ai-travel-card{grid-column:1;grid-row:2}#ai-image .ai-travel-stack{height:clamp(230px,54vw,390px)}#ai-image .ai-travel-stack img{border-width:4px}#ai-image .ai-travel-hint{font-size:10px;padding:6px 8px}}
 @media(max-width:440px){#ai-image .ai-travel-card{grid-column:1;grid-row:auto}#ai-image .ai-travel-stack{height:clamp(350px,105vw,490px)}}
 @media(prefers-reduced-motion:reduce){#ai-image .ai-travel-stack img{transition:none}}
+
+/* AI Image 04: reduce excess white framing while preserving all poster text. */
+#ai-image .ai-travel-stack img{width:86%;height:98%;border:0!important;background:transparent!important;object-fit:contain;box-shadow:0 8px 20px rgba(29,65,85,.11)}
+#ai-image .ai-travel-front{left:0;top:0;transform:rotate(-3deg)}
+#ai-image .ai-travel-back{right:0;top:1%;transform:rotate(3deg) scale(.96)}
+#ai-image .ai-travel-stack.is-swapped .ai-travel-front{transform:rotate(3deg) translate(10%,1%) scale(.96)}
+#ai-image .ai-travel-stack.is-swapped .ai-travel-back{transform:rotate(-3deg) translate(-9%,-1%) scale(1)}
+#ai-image .ai-travel-hint{left:3%;bottom:0}
