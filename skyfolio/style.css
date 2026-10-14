@@ -470,3 +470,7 @@
 #ai-image .ai-stack-zoom{display:inline-flex;align-items:center;justify-content:center;gap:5px;margin:12px 0 3px;padding:9px 15px;border:1px solid rgba(56,101,128,.24);border-radius:999px;background:rgba(255,255,255,.96);color:#315571;font:600 12px/1.4 inherit;cursor:pointer;box-shadow:0 4px 14px rgba(25,60,80,.09);transition:background .2s,transform .2s}
 #ai-image .ai-stack-zoom:hover{background:#e8f5fc;transform:translateY(-2px)}
 #ai-image .ai-stack-zoom:focus-visible{outline:3px solid #557f9a;outline-offset:3px}
+
+/* Match the AI Image 01 / 03 rounded white enlargement label exactly. */
+#ai-image .ai-stack-zoom{appearance:none!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;width:auto!important;min-width:0!important;margin:12px 0 3px!important;padding:7px 11px!important;border:0!important;border-radius:30px!important;background:rgba(255,255,255,.9)!important;color:#35536a!important;font-family:inherit!important;font-size:12px!important;font-weight:400!important;line-height:normal!important;letter-spacing:normal!important;box-shadow:none!important;cursor:pointer!important}
+#ai-image .ai-stack-zoom:hover{background:#fff!important;transform:none!important}
