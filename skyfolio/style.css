@@ -423,3 +423,17 @@
  #ai-image .ai-neon-stack img{width:90%!important;height:78%!important}
  #ai-image .ai-magazine-card .ai-magazine-image{justify-content:center!important}
 }
+
+/* AI Image 04: stacked Tokyo/Tonami travel posters directly below AI Image 01. */
+#ai-image .ai-travel-card{grid-column:1;grid-row:2;min-width:0}
+#ai-image .ai-travel-stack{position:relative;display:block;width:100%;height:clamp(370px,34vw,470px);padding:0;border:0;background:transparent;cursor:pointer;overflow:visible}
+#ai-image .ai-travel-stack img{position:absolute;display:block;width:73%;height:91%;object-fit:contain;object-position:center;box-sizing:border-box;border:6px solid white;border-radius:9px;background:#fff;box-shadow:0 12px 28px rgba(29,65,85,.15);transition:transform .35s ease,z-index .35s ease}
+#ai-image .ai-travel-front{left:3%;top:1%;z-index:2;transform:rotate(-5deg)}
+#ai-image .ai-travel-back{right:3%;top:6%;z-index:1;transform:rotate(6deg) scale(.94)}
+#ai-image .ai-travel-stack.is-swapped .ai-travel-front{z-index:1;transform:rotate(6deg) translate(14%,3%) scale(.94)}
+#ai-image .ai-travel-stack.is-swapped .ai-travel-back{z-index:2;transform:rotate(-5deg) translate(-12%,-2%) scale(1)}
+#ai-image .ai-travel-hint{position:absolute;left:6%;bottom:0;z-index:3;padding:7px 12px;border-radius:22px;background:rgba(255,255,255,.94);color:#315571;font-size:12px;pointer-events:none}
+#ai-image .ai-travel-stack:focus-visible{outline:3px solid #557f9a;outline-offset:5px;border-radius:10px}
+@media(max-width:760px){#ai-image .ai-travel-card{grid-column:1;grid-row:2}#ai-image .ai-travel-stack{height:clamp(230px,54vw,390px)}#ai-image .ai-travel-stack img{border-width:4px}#ai-image .ai-travel-hint{font-size:10px;padding:6px 8px}}
+@media(max-width:440px){#ai-image .ai-travel-card{grid-column:1;grid-row:auto}#ai-image .ai-travel-stack{height:clamp(350px,105vw,490px)}}
+@media(prefers-reduced-motion:reduce){#ai-image .ai-travel-stack img{transition:none}}
