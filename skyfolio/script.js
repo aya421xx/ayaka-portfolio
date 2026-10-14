@@ -27,3 +27,6 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
  media.replaceChildren(img);
  document.querySelector('#lightbox').showModal();
 }))})();
+
+/* Switch buttons use the same image-flip interaction as the stacked image itself. */
+(()=>{document.querySelectorAll('.ai-stack-switch').forEach(button=>button.addEventListener('click',()=>{const stack=button.closest('.ai-image-card').querySelector('.ai-travel-stack, .ai-neon-stack');if(stack)stack.click()}))})();
