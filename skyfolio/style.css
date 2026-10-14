@@ -553,3 +553,8 @@
  #ai-image .ai-kate-card .ai-kate-image img{transform:scale(1.10)!important;transform-origin:center center!important}
  #ai-image .ai-kate-card .ai-kate-image:hover img{transform:scale(1.12)!important}
 }
+
+/* AI Image 01: fill the available width; crop excess height rather than letterboxing. */
+#ai-image .ai-kate-card .ai-kate-image{overflow:hidden!important}
+#ai-image .ai-kate-card .ai-kate-image img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center center!important;transform:none!important}
+#ai-image .ai-kate-card .ai-kate-image:hover img{transform:scale(1.025)!important}
