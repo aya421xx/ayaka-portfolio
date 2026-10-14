@@ -490,3 +490,8 @@
 /* Keep the header navigation right-aligned after removing the wordmark. */
 @media(min-width:761px){.nav #navlinks{margin-left:auto!important;justify-content:flex-end!important}}
 @media(max-width:760px){.nav .menu{margin-left:auto!important}.nav #navlinks{margin-left:0!important}}
+
+/* Fix AI Image 02 / 04 buttons in one non-wrapping horizontal row. */
+#ai-image .ai-neon-card .ai-stack-actions,#ai-image .ai-travel-card .ai-stack-actions{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:flex-start!important;gap:8px!important;width:100%!important;max-width:100%!important;position:relative!important;clear:both!important;margin:10px 0 8px!important;padding:0!important;overflow:visible!important}
+#ai-image .ai-stack-actions>.ai-stack-switch,#ai-image .ai-stack-actions>.ai-stack-zoom{position:relative!important;inset:auto!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;float:none!important;display:inline-flex!important;flex:0 0 auto!important;align-self:center!important;width:auto!important;max-width:none!important;margin:0!important;white-space:nowrap!important;vertical-align:middle!important;line-height:1.4!important}
+@media(max-width:440px){#ai-image .ai-stack-actions{gap:5px!important}#ai-image .ai-stack-actions>.ai-stack-switch,#ai-image .ai-stack-actions>.ai-stack-zoom{font-size:9px!important;padding:6px 7px!important}}
