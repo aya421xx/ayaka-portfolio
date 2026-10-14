@@ -465,3 +465,8 @@
  #ai-image .ai-kate-card .ai-kate-image img,#ai-image .ai-magazine-card .ai-magazine-image img{height:100%!important;width:auto!important;max-width:100%!important;object-fit:contain!important;object-position:center!important}
 }
 @media(max-width:760px){#ai-image .ai-kate-card .ai-kate-image,#ai-image .ai-magazine-card .ai-magazine-image{justify-content:center!important}}
+
+/* AI Image 02 / 04: independent zoom button, matching the other image previews. */
+#ai-image .ai-stack-zoom{display:inline-flex;align-items:center;justify-content:center;gap:5px;margin:12px 0 3px;padding:9px 15px;border:1px solid rgba(56,101,128,.24);border-radius:999px;background:rgba(255,255,255,.96);color:#315571;font:600 12px/1.4 inherit;cursor:pointer;box-shadow:0 4px 14px rgba(25,60,80,.09);transition:background .2s,transform .2s}
+#ai-image .ai-stack-zoom:hover{background:#e8f5fc;transform:translateY(-2px)}
+#ai-image .ai-stack-zoom:focus-visible{outline:3px solid #557f9a;outline-offset:3px}
