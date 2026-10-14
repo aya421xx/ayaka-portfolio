@@ -558,3 +558,15 @@
 #ai-image .ai-kate-card .ai-kate-image{overflow:hidden!important}
 #ai-image .ai-kate-card .ai-kate-image img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center center!important;transform:none!important}
 #ai-image .ai-kate-card .ai-kate-image:hover img{transform:scale(1.025)!important}
+
+/* Align AI Image cards to equal column widths, top edges and consistent spacing. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;column-gap:28px!important;row-gap:36px!important;align-items:start!important}
+ #ai-image .ai-image-grid>.ai-image-card{min-width:0!important;width:100%!important;max-width:100%!important;justify-self:stretch!important}
+ #ai-image .ai-magazine-card .ai-magazine-image,#ai-image .ai-neon-card .ai-neon-stack,#ai-image .ai-kate-card .ai-kate-image{height:clamp(370px,34vw,470px)!important;width:100%!important;margin:0!important}
+ #ai-image .ai-magazine-card .ai-magazine-image,#ai-image .ai-kate-card .ai-kate-image{display:flex!important;align-items:center!important;justify-content:center!important}
+ #ai-image .ai-magazine-card .ai-magazine-image img{height:100%!important;max-width:100%!important;object-fit:contain!important}
+ #ai-image .ai-kate-card .ai-kate-image img{height:100%!important;width:100%!important;object-fit:cover!important}
+ #ai-image .ai-neon-card .ai-neon-stack{display:block!important}
+ #ai-image .ai-image-grid>.ai-travel-card{grid-column:1!important;grid-row:2!important}
+}
