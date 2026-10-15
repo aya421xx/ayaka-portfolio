@@ -580,3 +580,6 @@
 #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;aspect-ratio:auto!important}
 #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{display:block!important;position:static!important;width:100%!important;height:auto!important;max-width:100%!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;transform:none!important;clip-path:none!important}
 #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img{transform:none!important}
+
+/* Keep complete AI Image 02 photos visible. */
+#ai-image .ai-neon-stack img{object-fit:contain!important;object-position:center!important;background:#fff!important;width:82%!important;height:72%!important;max-width:82%!important;max-height:72%!important}
