@@ -583,3 +583,6 @@
 
 /* Keep complete AI Image 02 photos visible. */
 #ai-image .ai-neon-stack img{object-fit:contain!important;object-position:center!important;background:#fff!important;width:82%!important;height:72%!important;max-width:82%!important;max-height:72%!important}
+
+/* AI Image 02: restore the original closely framed overlapping-photo look. */
+#ai-image .ai-neon-card .ai-neon-stack img{object-fit:cover!important;object-position:center!important;background:transparent!important;width:83%!important;height:74%!important;max-width:none!important;max-height:none!important;border:6px solid #fff!important;border-radius:12px!important}
