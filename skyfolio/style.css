@@ -613,3 +613,9 @@
 #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{display:block!important;width:61.6%!important;max-width:61.6%!important;height:auto!important;max-height:none!important;object-fit:contain!important;transform:none!important}
 #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img{transform:none!important}
 @media(max-width:760px){#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{width:63%!important;max-width:63%!important}}
+
+/* AI Image 01: 20% larger than prior 61.6% width, with no clipping at any breakpoint. */
+#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image{display:flex!important;position:relative!important;align-items:flex-start!important;justify-content:center!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important;overflow:visible!important;clip-path:none!important}
+#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{position:static!important;display:block!important;flex:0 0 auto!important;width:73.92%!important;max-width:73.92%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;transform:none!important;clip-path:none!important}
+#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img{transform:none!important}
+@media(max-width:760px){#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{width:75.6%!important;max-width:75.6%!important}}
