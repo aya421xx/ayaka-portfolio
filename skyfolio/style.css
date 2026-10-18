@@ -586,3 +586,12 @@
 
 /* AI Image 02: restore the original closely framed overlapping-photo look. */
 #ai-image .ai-neon-card .ai-neon-stack img{object-fit:cover!important;object-position:center!important;background:transparent!important;width:83%!important;height:74%!important;max-width:none!important;max-height:none!important;border:6px solid #fff!important;border-radius:12px!important}
+
+/* AI Image 02: frame follows photo proportions; even narrow border on all four sides. */
+#ai-image .ai-image-grid>.ai-neon-card .ai-neon-stack{overflow:visible!important}
+#ai-image .ai-image-grid>.ai-neon-card .ai-neon-stack img{box-sizing:border-box!important;width:96%!important;height:auto!important;aspect-ratio:3 / 2!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center!important;padding:0!important;background:transparent!important;border:6px solid #fff!important;border-radius:12px!important}
+#ai-image .ai-image-grid>.ai-neon-card .ai-neon-stack .ai-neon-front{top:18%!important;left:0!important}
+#ai-image .ai-image-grid>.ai-neon-card .ai-neon-stack .ai-neon-back{top:25%!important;right:0!important}
+/* AI Image 03 is intentionally quieter so AI Image 02 is the focal point. */
+#ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image img{width:auto!important;height:78%!important;max-height:78%!important;max-width:85%!important;object-fit:contain!important}
+@media(max-width:760px){#ai-image .ai-image-grid>.ai-neon-card .ai-neon-stack img{width:94%!important;border-width:4px!important}#ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image img{height:82%!important;max-height:82%!important}}
