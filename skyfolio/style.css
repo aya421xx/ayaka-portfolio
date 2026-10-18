@@ -595,3 +595,15 @@
 /* AI Image 03 is intentionally quieter so AI Image 02 is the focal point. */
 #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image img{width:auto!important;height:78%!important;max-height:78%!important;max-width:85%!important;object-fit:contain!important}
 @media(max-width:760px){#ai-image .ai-image-grid>.ai-neon-card .ai-neon-stack img{width:94%!important;border-width:4px!important}#ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image img{height:82%!important;max-height:82%!important}}
+
+/* Balance the three AI Image works: equal column gaps, slightly smaller 01. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;column-gap:32px!important;row-gap:36px!important;align-items:start!important}
+ #ai-image .ai-image-grid>.ai-image-card{width:100%!important;min-width:0!important;max-width:100%!important;justify-self:stretch!important}
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image{display:flex!important;align-items:flex-start!important;justify-content:center!important;width:100%!important;height:auto!important;overflow:visible!important}
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{display:block!important;width:88%!important;height:auto!important;max-width:88%!important;max-height:none!important;object-fit:contain!important;transform:none!important}
+}
+@media(max-width:760px){
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image{display:flex!important;justify-content:center!important}
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{width:90%!important;height:auto!important;max-width:90%!important;object-fit:contain!important;transform:none!important}
+}
