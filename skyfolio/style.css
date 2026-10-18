@@ -607,3 +607,9 @@
  #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image{display:flex!important;justify-content:center!important}
  #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{width:90%!important;height:auto!important;max-width:90%!important;object-fit:contain!important;transform:none!important}
 }
+
+/* Reduce AI Image 01 artwork by another ~30%, keeping the full image visible. */
+#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image{display:flex!important;justify-content:center!important;align-items:flex-start!important;width:100%!important;height:auto!important;overflow:visible!important}
+#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{display:block!important;width:61.6%!important;max-width:61.6%!important;height:auto!important;max-height:none!important;object-fit:contain!important;transform:none!important}
+#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img{transform:none!important}
+@media(max-width:760px){#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{width:63%!important;max-width:63%!important}}
