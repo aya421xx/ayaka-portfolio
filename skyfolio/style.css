@@ -705,3 +705,14 @@
 
 /* Give the profile note a little more usable line width on desktop. */
 @media(min-width:761px){.profile-personal-note{padding-left:14px;padding-right:14px}}
+
+/* Magazine cover: ~20% larger within its existing card, preserving the three-column layout. */
+#ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image img{
+ height:93.6%!important;max-height:93.6%!important;
+ max-width:100%!important;width:auto!important;object-fit:contain!important;
+}
+@media(max-width:760px){
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image img{
+  height:98.4%!important;max-height:98.4%!important;max-width:100%!important;
+ }
+}
