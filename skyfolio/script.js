@@ -6,7 +6,7 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
 /* Sparkle at changing locations, never the same star twice in succession. */
 (()=>{const stars=Array.from(document.querySelectorAll('.hero .hero-sparkle')).filter(el=>getComputedStyle(el).display!=='none');if(!stars.length||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;let previous=-1;let stopped=false;const choose=()=>{if(stopped)return;const available=stars.filter((el,i)=>i!==previous&&getComputedStyle(el).display!=='none');if(!available.length)return;const star=available[Math.floor(Math.random()*available.length)];previous=stars.indexOf(star);star.classList.remove('is-twinkling');void star.offsetWidth;star.classList.add('is-twinkling');setTimeout(()=>star.classList.remove('is-twinkling'),720);};choose();const timer=setInterval(()=>{if(!document.hidden)choose()},1050);window.addEventListener('pagehide',()=>{stopped=true;clearInterval(timer)},{once:true})})();
 
-/* Hover to preview the second image; tap/click to toggle on touch devices. */
+/* Preview alternate stacked artwork on hover; click the artwork to enlarge it. */
 (()=>{
  const setups=[
   {selector:'.ai-neon-stack',counter:'.ai-neon-counter',caption:'.ai-image-caption',first:'ネオンの街並み',second:'青いネオンの飲食店'},
@@ -18,35 +18,23 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
   const card=stack.closest('.ai-image-card');
   const count=card.querySelector(counter);
   const note=card.querySelector(caption);
-  let tapped=false;
-  const setSwapped=(swapped)=>{
+  let swapped=false;
+  const setSwapped=(value)=>{
+   swapped=value;
    stack.classList.toggle('is-swapped',swapped);
    if(count)count.textContent=swapped?'02 / 02':'01 / 02';
    if(note)note.textContent=(swapped?second:first)+' · マウスを重ねると画像が切り替わります';
-   stack.setAttribute('aria-label',swapped?'現在2枚目を表示。クリックして1枚目へ切り替え':'現在1枚目を表示。クリックして2枚目へ切り替え');
+   stack.setAttribute('aria-label','表示中の'+(swapped?second:first)+'の画像を拡大して見る');
   };
   stack.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'||e.pointerType==='pen')setSwapped(true)});
   stack.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'||e.pointerType==='pen')setSwapped(false)});
   stack.addEventListener('click',()=>{
-   if(window.matchMedia('(hover: hover) and (pointer: fine)').matches)return;
-   tapped=!tapped;setSwapped(tapped);
+   const current=stack.querySelector(swapped?'.ai-travel-back, .ai-neon-back':'.ai-travel-front, .ai-neon-front');
+   if(!current)return;
+   const img=document.createElement('img');
+   img.src=current.currentSrc||current.src;img.alt=current.alt;img.decoding='async';
+   document.querySelector('#modal-media').replaceChildren(img);
+   document.querySelector('#lightbox').showModal();
   });
  });
 })();
-
-/* Open the currently frontmost stacked AI artwork in the existing lightbox. */
-(()=>{document.querySelectorAll('.ai-stack-zoom').forEach(button=>button.addEventListener('click',()=>{
- const card=button.closest('.ai-image-card');
- const stack=card.querySelector('.ai-travel-stack, .ai-neon-stack');
- if(!stack)return;
- const current=stack.classList.contains('is-swapped')?stack.querySelector('.ai-travel-back, .ai-neon-back'):stack.querySelector('.ai-travel-front, .ai-neon-front');
- if(!current)return;
- const media=document.querySelector('#modal-media');
- const img=document.createElement('img');
- img.src=current.currentSrc||current.src;
- img.alt=current.alt;
- img.decoding='async';
- media.replaceChildren(img);
- document.querySelector('#lightbox').showModal();
-}))})();
-
