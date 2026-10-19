@@ -716,3 +716,31 @@
   height:98.4%!important;max-height:98.4%!important;max-width:100%!important;
  }
 }
+
+/* Shared hover magnifier on all main artwork thumbnails. */
+#works .travel-work-card .work-image,
+#ai-image .ai-magazine-card .ai-magazine-image,
+#ai-image .ai-kate-card .ai-kate-image,
+#ai-image .ai-neon-card .ai-neon-stack,
+#ai-image .ai-travel-card .ai-travel-stack{cursor:zoom-in!important;position:relative}
+#works .travel-work-card .work-image .view,
+#ai-image .artwork-zoom-icon{
+ position:absolute!important;right:12px!important;bottom:12px!important;left:auto!important;top:auto!important;
+ width:34px!important;height:34px!important;border-radius:50%!important;
+ display:grid!important;place-items:center!important;z-index:20!important;
+ background:rgba(255,255,255,.96)!important;color:#315571!important;
+ box-shadow:0 3px 10px rgba(30,67,90,.2)!important;
+ font-family:Arial,sans-serif!important;font-size:26px!important;font-weight:400!important;line-height:1!important;
+ opacity:0!important;transform:translateY(5px)!important;
+ transition:opacity .2s ease,transform .2s ease!important;pointer-events:none!important;
+}
+#works .travel-work-card .work-image:hover .view,
+#works .travel-work-card .work-image:focus-visible .view,
+#ai-image .ai-magazine-image:hover .artwork-zoom-icon,
+#ai-image .ai-magazine-image:focus-visible .artwork-zoom-icon,
+#ai-image .ai-neon-stack:hover .artwork-zoom-icon,
+#ai-image .ai-neon-stack:focus-visible .artwork-zoom-icon,
+#ai-image .ai-travel-stack:hover .artwork-zoom-icon,
+#ai-image .ai-travel-stack:focus-visible .artwork-zoom-icon{opacity:1!important;transform:translateY(0)!important}
+@media(hover:none){#works .travel-work-card .work-image .view,#ai-image .artwork-zoom-icon{opacity:.9!important;transform:none!important}}
+@media(prefers-reduced-motion:reduce){#works .travel-work-card .work-image .view,#ai-image .artwork-zoom-icon{transition:none!important}}
