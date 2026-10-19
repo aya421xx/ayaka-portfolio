@@ -645,3 +645,15 @@
 #ai-image .ai-kate-card .ai-kate-details[open]>summary .ai-video-details-icon::before{content:'⌃';font-size:20px}
 #ai-image .ai-kate-card .ai-kate-details>.ai-video-details-content{margin-top:12px;border:1px solid rgba(92,139,165,.18);border-radius:12px;background:rgba(240,249,254,.72);padding:13px 14px 17px}
 @media(prefers-reduced-motion:reduce){#ai-image .ai-kate-card .ai-kate-details>summary{transition:none}}
+
+/* Da Nang model sheets nested within the video details, matching kate spade. */
+#ai-video .ai-danang-sheets{margin:18px 0 0;border:1px solid rgba(92,139,165,.2);border-radius:10px;background:rgba(255,255,255,.76);overflow:hidden}
+#ai-video .ai-danang-sheets>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;cursor:pointer;list-style:none;font-size:13px;font-weight:600;color:#315571;background:transparent;transition:background .2s ease}
+#ai-video .ai-danang-sheets>summary::-webkit-details-marker{display:none}
+#ai-video .ai-danang-sheets>summary:hover{background:rgba(221,241,252,.8)}
+#ai-video .ai-danang-sheets>summary:focus-visible{outline:2px solid #477b9b;outline-offset:-3px}
+#ai-video .ai-danang-sheets>summary .ai-video-details-icon::before{content:'+';font-size:22px;line-height:1}
+#ai-video .ai-danang-sheets[open]>summary .ai-video-details-icon::before{content:'−'}
+#ai-video .ai-danang-sheet-images{display:grid;grid-template-columns:1fr;gap:14px;padding:14px;border-top:1px solid rgba(92,139,165,.14)}
+#ai-video .ai-danang-sheet-images a{display:block;cursor:zoom-in}
+#ai-video .ai-danang-sheet-images img{display:block;width:100%;height:auto;border-radius:7px;border:1px solid rgba(92,139,165,.14)}
