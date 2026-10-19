@@ -657,3 +657,58 @@
 #ai-video .ai-danang-sheet-images{display:grid;grid-template-columns:1fr;gap:14px;padding:14px;border-top:1px solid rgba(92,139,165,.14)}
 #ai-video .ai-danang-sheet-images a{display:block;cursor:zoom-in}
 #ai-video .ai-danang-sheet-images img{display:block;width:100%;height:auto;border-radius:7px;border:1px solid rgba(92,139,165,.14)}
+
+/* Unified light-blue action pills: image switching, zoom, and PDF actions. */
+#ai-image .ai-stack-actions>.ai-stack-switch,
+#ai-image .ai-stack-actions>.ai-stack-zoom,
+#ai-image .ai-magazine-hint,
+#illustrator .illustrator-pdf-link,
+.illustrator-section .illustrator-pdf-link{
+ box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;
+ width:auto!important;min-height:43px!important;padding:8px 11px 8px 14px!important;
+ border:1px solid #b3d5e9!important;border-radius:999px!important;
+ background:#d9edf9!important;color:#315571!important;
+ box-shadow:0 3px 9px rgba(62,118,151,.16)!important;
+ font-size:12px!important;font-weight:600!important;line-height:1.35!important;
+ text-decoration:none!important;white-space:normal!important;
+ transition:background .2s ease,box-shadow .2s ease,transform .2s ease!important;
+ cursor:pointer!important;
+}
+#ai-image .ai-stack-actions>.ai-stack-switch::before,
+#ai-image .ai-stack-actions>.ai-stack-zoom::before,
+#ai-image .ai-magazine-hint::before,
+.illustrator-section .illustrator-pdf-link::before{
+ content:'✧';color:#6a9dbb;font-size:16px;line-height:1;
+}
+#ai-image .ai-stack-actions>.ai-stack-switch::after,
+#ai-image .ai-stack-actions>.ai-stack-zoom::after,
+#ai-image .ai-magazine-hint::after,
+.illustrator-section .illustrator-pdf-link::after{
+ content:'↘';display:grid;place-items:center;flex:none;
+ width:25px;height:25px;border-radius:50%;background:#fff;
+ color:#315571;font-size:15px;font-weight:500;line-height:1;
+}
+#ai-image .ai-stack-actions>.ai-stack-switch:hover,
+#ai-image .ai-stack-actions>.ai-stack-zoom:hover,
+#ai-image .ai-magazine-image:hover .ai-magazine-hint,
+.illustrator-section .illustrator-pdf-link:hover{
+ background:#cce6f6!important;box-shadow:0 5px 13px rgba(62,118,151,.22)!important;
+ transform:translateY(-2px)!important;
+}
+#ai-image .ai-stack-actions>.ai-stack-switch:focus-visible,
+#ai-image .ai-stack-actions>.ai-stack-zoom:focus-visible,
+.illustrator-section .illustrator-pdf-link:focus-visible{
+ outline:2px solid #315571!important;outline-offset:3px!important;
+}
+#ai-image .ai-stack-actions{display:flex!important;flex-wrap:wrap!important;gap:9px!important;align-items:center!important}
+#ai-image .ai-magazine-hint{position:absolute!important;left:8px!important;bottom:8px!important;pointer-events:none!important}
+@media(max-width:760px){
+ #ai-image .ai-stack-actions>.ai-stack-switch,
+ #ai-image .ai-stack-actions>.ai-stack-zoom{font-size:11px!important;padding:8px 10px 8px 12px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #ai-image .ai-stack-actions>.ai-stack-switch,
+ #ai-image .ai-stack-actions>.ai-stack-zoom,
+ #ai-image .ai-magazine-hint,
+ .illustrator-section .illustrator-pdf-link{transition:none!important}
+}
