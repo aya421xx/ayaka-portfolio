@@ -6,11 +6,33 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
 /* Sparkle at changing locations, never the same star twice in succession. */
 (()=>{const stars=Array.from(document.querySelectorAll('.hero .hero-sparkle')).filter(el=>getComputedStyle(el).display!=='none');if(!stars.length||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;let previous=-1;let stopped=false;const choose=()=>{if(stopped)return;const available=stars.filter((el,i)=>i!==previous&&getComputedStyle(el).display!=='none');if(!available.length)return;const star=available[Math.floor(Math.random()*available.length)];previous=stars.indexOf(star);star.classList.remove('is-twinkling');void star.offsetWidth;star.classList.add('is-twinkling');setTimeout(()=>star.classList.remove('is-twinkling'),720);};choose();const timer=setInterval(()=>{if(!document.hidden)choose()},1050);window.addEventListener('pagehide',()=>{stopped=true;clearInterval(timer)},{once:true})})();
 
-/* Flip the two overlapping neon photos on each click. */
-(()=>{const button=document.querySelector('.ai-neon-stack');if(!button)return;const counter=document.querySelector('.ai-neon-counter');const caption=button.closest('.ai-neon-card').querySelector('.ai-image-caption');let swapped=false;button.addEventListener('click',()=>{swapped=!swapped;button.classList.toggle('is-swapped',swapped);counter.textContent=swapped?'02 / 02':'01 / 02';caption.textContent=swapped?'青いネオンの飲食店 · 画像をクリックして切り替え':'ネオンの街並み · 画像をクリックして切り替え';button.setAttribute('aria-label',swapped?'重なったAI画像を切り替える（現在：青いネオンの飲食店）':'重なったAI画像を切り替える（現在：ネオンの街並み）')})})();
-
-/* Flip the overlapping Tokyo and Tonami travel posters. */
-(()=>{const button=document.querySelector('.ai-travel-stack');if(!button)return;const card=button.closest('.ai-travel-card');const counter=card.querySelector('.ai-travel-counter');const caption=card.querySelector('.ai-travel-caption');let swapped=false;button.addEventListener('click',()=>{swapped=!swapped;button.classList.toggle('is-swapped',swapped);counter.textContent=swapped?'02 / 02':'01 / 02';caption.textContent=swapped?'TONAMI · 画像をクリックして切り替え':'TOKYO · 画像をクリックして切り替え';button.setAttribute('aria-label',swapped?'東京と砺波のAI画像を切り替える（現在：砺波）':'東京と砺波のAI画像を切り替える（現在：東京）')})})();
+/* Hover to preview the second image; tap/click to toggle on touch devices. */
+(()=>{
+ const setups=[
+  {selector:'.ai-neon-stack',counter:'.ai-neon-counter',caption:'.ai-image-caption',first:'ネオンの街並み',second:'青いネオンの飲食店'},
+  {selector:'.ai-travel-stack',counter:'.ai-travel-counter',caption:'.ai-travel-caption',first:'TOKYO',second:'TONAMI'}
+ ];
+ setups.forEach(({selector,counter,caption,first,second})=>{
+  const stack=document.querySelector(selector);
+  if(!stack)return;
+  const card=stack.closest('.ai-image-card');
+  const count=card.querySelector(counter);
+  const note=card.querySelector(caption);
+  let tapped=false;
+  const setSwapped=(swapped)=>{
+   stack.classList.toggle('is-swapped',swapped);
+   if(count)count.textContent=swapped?'02 / 02':'01 / 02';
+   if(note)note.textContent=(swapped?second:first)+' · マウスを重ねると画像が切り替わります';
+   stack.setAttribute('aria-label',swapped?'現在2枚目を表示。クリックして1枚目へ切り替え':'現在1枚目を表示。クリックして2枚目へ切り替え');
+  };
+  stack.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'||e.pointerType==='pen')setSwapped(true)});
+  stack.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'||e.pointerType==='pen')setSwapped(false)});
+  stack.addEventListener('click',()=>{
+   if(window.matchMedia('(hover: hover) and (pointer: fine)').matches)return;
+   tapped=!tapped;setSwapped(tapped);
+  });
+ });
+})();
 
 /* Open the currently frontmost stacked AI artwork in the existing lightbox. */
 (()=>{document.querySelectorAll('.ai-stack-zoom').forEach(button=>button.addEventListener('click',()=>{
@@ -28,5 +50,3 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
  document.querySelector('#lightbox').showModal();
 }))})();
 
-/* Switch buttons use the same image-flip interaction as the stacked image itself. */
-(()=>{document.querySelectorAll('.ai-stack-switch').forEach(button=>button.addEventListener('click',()=>{const stack=button.closest('.ai-image-card').querySelector('.ai-travel-stack, .ai-neon-stack');if(stack)stack.click()}))})();
