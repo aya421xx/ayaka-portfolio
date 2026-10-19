@@ -657,3 +657,6 @@
 #ai-video .ai-danang-sheet-images{display:grid;grid-template-columns:1fr;gap:14px;padding:14px;border-top:1px solid rgba(92,139,165,.14)}
 #ai-video .ai-danang-sheet-images a{display:block;cursor:zoom-in}
 #ai-video .ai-danang-sheet-images img{display:block;width:100%;height:auto;border-radius:7px;border:1px solid rgba(92,139,165,.14)}
+
+/* Tighter tracking for the Contact heading, keeping the existing font and weight. */
+.contact h2{letter-spacing:.025em}
