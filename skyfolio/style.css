@@ -660,3 +660,15 @@
 
 /* Tighter tracking for the Contact heading, keeping the existing font and weight. */
 .contact h2{letter-spacing:.025em}
+
+/* Canva works: two layered landscape designs, Bali in front. */
+.canva-card .canva-image-stack{position:relative;isolation:isolate;width:100%;aspect-ratio:1.48;overflow:visible;margin-bottom:15px}
+.canva-card .canva-image{position:absolute;display:block;width:82%;aspect-ratio:16/9;border:5px solid #fff;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 10px 25px rgba(33,80,110,.19);transition:transform .2s ease,box-shadow .2s ease;cursor:zoom-in}
+.canva-card .canva-image img{display:block;width:100%;height:100%;object-fit:contain}
+.canva-card .canva-image-back{top:4%;right:1%;z-index:1;transform:rotate(4deg)}
+.canva-card .canva-image-front{left:1%;bottom:4%;z-index:2;transform:rotate(-4deg)}
+.canva-card .canva-image:hover{z-index:3;box-shadow:0 14px 30px rgba(33,80,110,.26)}
+.canva-card .canva-image-back:hover{transform:rotate(2deg) translateY(-4px)}
+.canva-card .canva-image-front:hover{transform:rotate(-2deg) translateY(-4px)}
+@media(max-width:760px){.canva-card .canva-image-stack{aspect-ratio:1.45}.canva-card .canva-image{border-width:3px}}
+@media(prefers-reduced-motion:reduce){.canva-card .canva-image{transition:none}}
