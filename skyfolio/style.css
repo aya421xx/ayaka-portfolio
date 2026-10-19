@@ -692,3 +692,13 @@
  #works .work-grid{gap:30px}
  #works .travel-work-card .work-image,#works .canva-card .canva-image-stack{aspect-ratio:1.52}
 }
+
+/* Keep the two Works captions on the same baseline, regardless of column width. */
+@media(min-width:761px){
+ #works .travel-work-card .work-image,
+ #works .canva-card .canva-image-stack{
+  height:clamp(245px,26vw,420px)!important;
+  aspect-ratio:auto!important;
+  margin-bottom:16px!important;
+ }
+}
