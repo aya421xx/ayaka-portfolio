@@ -702,3 +702,6 @@
   margin-bottom:16px!important;
  }
 }
+
+/* Give the profile note a little more usable line width on desktop. */
+@media(min-width:761px){.profile-personal-note{padding-left:14px;padding-right:14px}}
