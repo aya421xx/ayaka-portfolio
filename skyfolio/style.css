@@ -672,3 +672,23 @@
 .canva-card .canva-image-front:hover{transform:rotate(-2deg) translateY(-4px)}
 @media(max-width:760px){.canva-card .canva-image-stack{aspect-ratio:1.45}.canva-card .canva-image{border-width:3px}}
 @media(prefers-reduced-motion:reduce){.canva-card .canva-image{transition:none}}
+
+/* Works layout refinement: aligned captions, stronger Mood Board, calmer Canva stack. */
+@media(min-width:761px){
+ #works .work-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:44px;align-items:start}
+}
+#works .travel-work-card .work-image,
+#works .canva-card .canva-image-stack{width:100%;aspect-ratio:1.52;height:auto;box-sizing:border-box;margin:0 0 16px}
+#works .travel-work-card .work-image{display:flex;align-items:center;justify-content:center;background:transparent;border-radius:9px;overflow:hidden}
+#works .travel-work-card .work-image img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:contain}
+#works .canva-card .canva-image-stack{position:relative;overflow:visible}
+#works .canva-card .canva-image{width:78%;aspect-ratio:16/9;border:3px solid white;border-radius:7px;box-shadow:0 5px 16px rgba(33,80,110,.14)}
+#works .canva-card .canva-image-back{top:6%;right:3%;transform:rotate(2deg)}
+#works .canva-card .canva-image-front{left:3%;bottom:8%;transform:rotate(-2deg)}
+#works .canva-card .canva-image-back:hover{transform:rotate(1deg) translateY(-3px)}
+#works .canva-card .canva-image-front:hover{transform:rotate(-1deg) translateY(-3px)}
+#works .work-grid>.work-card>.work-info{margin-top:0}
+@media(max-width:760px){
+ #works .work-grid{gap:30px}
+ #works .travel-work-card .work-image,#works .canva-card .canva-image-stack{aspect-ratio:1.52}
+}
