@@ -619,3 +619,16 @@
 #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{position:static!important;display:block!important;flex:0 0 auto!important;width:73.92%!important;max-width:73.92%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;transform:none!important;clip-path:none!important}
 #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img{transform:none!important}
 @media(max-width:760px){#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{width:75.6%!important;max-width:75.6%!important}}
+
+/* Inviting, accessible detail toggles for both AI videos */
+#ai-video .ai-video-details{margin-top:16px;border:0;background:transparent;border-radius:0;overflow:visible}
+#ai-video .ai-video-details>summary{display:inline-flex;justify-content:flex-start;gap:12px;min-height:46px;padding:10px 12px 10px 16px;border:1px solid #b3d5e9;border-radius:999px;background:#d9edf9;color:#315571;box-shadow:0 3px 9px rgba(62,118,151,.16);font-size:14px;font-weight:600;transition:background .2s ease,box-shadow .2s ease,transform .2s ease}
+#ai-video .ai-video-details>summary:hover{background:#cce6f6;box-shadow:0 5px 13px rgba(62,118,151,.22);transform:translateY(-2px)}
+#ai-video .ai-video-details>summary:active{transform:translateY(0)}
+#ai-video .ai-video-details>summary:focus-visible{outline:2px solid #315571;outline-offset:3px}
+#ai-video .ai-video-details-label::before{content:'✧';color:#6a9dbb;margin-right:9px;font-size:17px}
+#ai-video .ai-video-details-icon{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#fff;color:#315571;flex:none}
+#ai-video .ai-video-details-icon::before{content:'↘';font-size:17px;font-weight:500;line-height:1;transition:transform .2s ease}
+#ai-video .ai-video-details[open] .ai-video-details-icon::before{content:'⌃';font-size:20px}
+#ai-video .ai-video-details[open]>.ai-video-details-content{margin-top:12px;border:1px solid rgba(92,139,165,.18);border-radius:12px;background:rgba(240,249,254,.72);padding:10px 19px 20px}
+@media(prefers-reduced-motion:reduce){#ai-video .ai-video-details>summary,#ai-video .ai-video-details-icon::before{transition:none}}
