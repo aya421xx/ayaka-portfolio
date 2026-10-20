@@ -892,3 +892,51 @@
   transform:scale(1.045)!important;
  }
 }
+
+/* Minimal star magnifier (concept C): subtle reveal and a single sparkle. */
+#works .travel-work-card .work-image,
+#ai-image .ai-magazine-card .ai-magazine-image,
+#ai-image .ai-kate-card .ai-kate-image,
+#ai-image .ai-neon-card .ai-neon-vertical a{position:relative!important}
+#works .travel-work-card .work-image .star-zoom-mark,
+#ai-image .ai-image-card .star-zoom-mark{
+ position:absolute!important;right:10px!important;bottom:10px!important;
+ left:auto!important;top:auto!important;z-index:30!important;
+ display:grid!important;place-items:center!important;
+ width:29px!important;height:29px!important;box-sizing:border-box!important;
+ padding:4px!important;border-radius:50%!important;
+ background:rgba(255,255,255,.88)!important;
+ border:1px solid rgba(155,190,208,.7)!important;
+ color:#7d9eb1!important;
+ box-shadow:0 2px 8px rgba(40,80,105,.12)!important;
+ opacity:0!important;transform:translateY(3px)!important;
+ transition:opacity .22s ease,transform .22s ease!important;
+ pointer-events:none!important;
+}
+#works .travel-work-card .star-zoom-mark svg,
+#ai-image .star-zoom-mark svg{display:block;width:100%!important;height:100%!important}
+#works .travel-work-card .work-image:hover .star-zoom-mark,
+#works .travel-work-card .work-image:focus-visible .star-zoom-mark,
+#ai-image .ai-image-card a:hover .star-zoom-mark,
+#ai-image .ai-image-card a:focus-visible .star-zoom-mark{
+ opacity:1!important;transform:translateY(0)!important;
+}
+#works .travel-work-card .star-zoom-spark,
+#ai-image .star-zoom-spark{transform-origin:15px 15px}
+#works .travel-work-card .work-image:hover .star-zoom-spark,
+#ai-image .ai-image-card a:hover .star-zoom-spark{
+ animation:starZoomGlimmer .65s ease-out 1 both;
+}
+@keyframes starZoomGlimmer{
+ 0%{opacity:.45;transform:scale(.75)}
+ 55%{opacity:1;transform:scale(1.14)}
+ 100%{opacity:1;transform:scale(1)}
+}
+@media(hover:none){
+ #works .travel-work-card .star-zoom-mark,
+ #ai-image .ai-image-card .star-zoom-mark{opacity:.9!important;transform:none!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #works .travel-work-card .star-zoom-spark,
+ #ai-image .star-zoom-spark{animation:none!important}
+}
