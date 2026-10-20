@@ -830,3 +830,34 @@
  #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image img,
  #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:hover img{transform:translateX(30px)!important}
 }
+
+/* Consistent subtle image hover zoom across the featured artworks. */
+#works .travel-work-card .work-image img,
+#ai-image .ai-neon-card .ai-neon-vertical img,
+#ai-image .ai-kate-card .ai-kate-image img{
+ transition:transform .25s ease!important;
+}
+#works .travel-work-card .work-image:hover img,
+#works .travel-work-card .work-image:focus-visible img{
+ transform:scale(1.025)!important;
+}
+#ai-image .ai-neon-card .ai-neon-vertical a:hover img,
+#ai-image .ai-neon-card .ai-neon-vertical a:focus-visible img{
+ transform:scale(1.025)!important;
+}
+#ai-image .ai-kate-card .ai-kate-image:hover img,
+#ai-image .ai-kate-card .ai-kate-image:focus-visible img{
+ transform:scale(1.025)!important;
+}
+@media(min-width:761px){
+ #ai-image .ai-kate-card .ai-kate-image img{transform:translateX(-32px)!important}
+ #ai-image .ai-kate-card .ai-kate-image:hover img,
+ #ai-image .ai-kate-card .ai-kate-image:focus-visible img{
+  transform:translateX(-32px) scale(1.025)!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ #works .travel-work-card .work-image img,
+ #ai-image .ai-neon-card .ai-neon-vertical img,
+ #ai-image .ai-kate-card .ai-kate-image img{transition:none!important}
+}
