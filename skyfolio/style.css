@@ -824,3 +824,9 @@
  #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img,
  #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img{transform:translateX(-32px)!important}
 }
+
+/* Visually balance gaps between the three desktop AI image artworks. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image img,
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:hover img{transform:translateX(30px)!important}
+}
