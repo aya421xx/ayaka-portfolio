@@ -861,3 +861,34 @@
  #ai-image .ai-neon-card .ai-neon-vertical img,
  #ai-image .ai-kate-card .ai-kate-image img{transition:none!important}
 }
+
+/* Final hover overrides: keep existing artwork offsets while zooming on hover. */
+#ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image>img,
+#ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{
+ transition:transform .28s ease,filter .28s ease!important;
+ transform-origin:center center!important;
+}
+@media(min-width:761px){
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image>img{
+  transform:translateX(30px)!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:hover>img,
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:focus-visible>img{
+  transform:translateX(30px) scale(1.045)!important;
+  filter:brightness(1.035)!important;
+ }
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{
+  transform:translateX(-32px)!important;
+ }
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img,
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:focus-visible>img{
+  transform:translateX(-32px) scale(1.045)!important;
+  filter:brightness(1.035)!important;
+ }
+}
+@media(max-width:760px){
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:hover>img,
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img{
+  transform:scale(1.045)!important;
+ }
+}
