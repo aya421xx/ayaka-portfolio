@@ -940,3 +940,14 @@
  #works .travel-work-card .star-zoom-spark,
  #ai-image .star-zoom-spark{animation:none!important}
 }
+
+/* Use the custom small star magnifier instead of the browser's black zoom cursor. */
+#works .travel-work-card .work-image,
+#ai-image .ai-magazine-card .ai-magazine-image,
+#ai-image .ai-kate-card .ai-kate-image,
+#ai-image .ai-neon-card .ai-neon-vertical a,
+#ai-image .ai-travel-card .ai-travel-stack,
+#ai-image .ai-image-card a,
+#works .canva-card .canva-image {cursor:pointer!important}
+#works .travel-work-card .work-image .view,
+#ai-image .artwork-zoom-icon {display:none!important}
