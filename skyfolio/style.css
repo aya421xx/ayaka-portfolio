@@ -744,3 +744,15 @@
 #ai-image .ai-travel-stack:focus-visible .artwork-zoom-icon{opacity:1!important;transform:translateY(0)!important}
 @media(hover:none){#works .travel-work-card .work-image .view,#ai-image .artwork-zoom-icon{opacity:.9!important;transform:none!important}}
 @media(prefers-reduced-motion:reduce){#works .travel-work-card .work-image .view,#ai-image .artwork-zoom-icon{transition:none!important}}
+
+/* Right-hand image navigation in expanded stacked artworks. */
+#lightbox .lightbox-next:not([hidden]){
+ position:fixed;right:clamp(14px,3vw,50px);top:50%;transform:translateY(-50%);
+ z-index:1002;width:52px;height:52px;display:grid;place-items:center;
+ border:0;border-radius:50%;background:#fff;color:#173b53;
+ font-size:27px;line-height:1;box-shadow:0 5px 18px rgba(0,0,0,.22);
+ cursor:pointer;transition:background .2s ease,transform .2s ease;
+}
+#lightbox .lightbox-next:not([hidden]):hover{background:#e4f3fb;transform:translateY(-50%) scale(1.06)}
+#lightbox .lightbox-next:focus-visible{outline:3px solid #7cbde0;outline-offset:3px}
+@media(max-width:600px){#lightbox .lightbox-next:not([hidden]){right:10px;width:42px;height:42px;font-size:22px}}
