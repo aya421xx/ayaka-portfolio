@@ -802,3 +802,19 @@
   #ai-image .ai-neon-card .ai-neon-vertical a { width: 100% !important; max-width: none !important; margin-inline: 0 !important; }
   #ai-image .ai-neon-card .ai-neon-vertical img { width: 100% !important; }
 }
+
+/* Desktop AI gallery: visually shift the center neon artwork toward Kate Spade. */
+@media(min-width:761px){
+ #ai-image .ai-neon-card .ai-neon-vertical{
+  transform:translateX(18px);
+ }
+ #ai-image .ai-neon-card .work-info,
+ #ai-image .ai-neon-card .ai-image-caption{
+  position:relative;left:18px;width:calc(100% - 18px);
+ }
+ #ai-image .ai-kate-card .work-info,
+ #ai-image .ai-kate-card .ai-image-caption{
+  width:100%!important;max-width:100%!important;box-sizing:border-box!important;
+  margin-left:0!important;transform:none!important;
+ }
+}
