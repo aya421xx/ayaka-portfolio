@@ -795,3 +795,10 @@
  #ai-image .ai-neon-card .ai-neon-vertical{gap:12px}
  #ai-image .ai-neon-card .ai-neon-vertical a{width:100%}
 }
+
+/* Widen the two vertically stacked neon images to balance the neighboring columns. */
+@media (min-width: 761px) {
+  #ai-image .ai-neon-card .ai-neon-vertical { width: 100% !important; align-items: stretch !important; }
+  #ai-image .ai-neon-card .ai-neon-vertical a { width: 100% !important; max-width: none !important; margin-inline: 0 !important; }
+  #ai-image .ai-neon-card .ai-neon-vertical img { width: 100% !important; }
+}
