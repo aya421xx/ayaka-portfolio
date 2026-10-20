@@ -6,8 +6,28 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
 /* Sparkle at changing locations, never the same star twice in succession. */
 (()=>{const stars=Array.from(document.querySelectorAll('.hero .hero-sparkle')).filter(el=>getComputedStyle(el).display!=='none');if(!stars.length||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;let previous=-1;let stopped=false;const choose=()=>{if(stopped)return;const available=stars.filter((el,i)=>i!==previous&&getComputedStyle(el).display!=='none');if(!available.length)return;const star=available[Math.floor(Math.random()*available.length)];previous=stars.indexOf(star);star.classList.remove('is-twinkling');void star.offsetWidth;star.classList.add('is-twinkling');setTimeout(()=>star.classList.remove('is-twinkling'),720);};choose();const timer=setInterval(()=>{if(!document.hidden)choose()},1050);window.addEventListener('pagehide',()=>{stopped=true;clearInterval(timer)},{once:true})})();
 
-/* Preview alternate stacked artwork on hover; click the artwork to enlarge it. */
+/* Delayed hover preview keeps the initial Tokyo image easy to open. */
 (()=>{
+ const modal=document.querySelector('#lightbox');
+ const media=document.querySelector('#modal-media');
+ const next=document.querySelector('#lightbox-next');
+ let slides=null,index=0;
+ const showSlide=()=>{
+  if(!slides)return;
+  const slide=slides[index];
+  const img=document.createElement('img');
+  img.src=slide.currentSrc||slide.src;
+  img.alt=slide.alt;
+  img.decoding='async';
+  media.replaceChildren(img);
+ };
+ const openSlides=(images,initial)=>{
+  slides=images;index=initial;showSlide();
+  next.hidden=images.length<2;
+  modal.showModal();
+ };
+ next.addEventListener('click',()=>{if(!slides)return;index=(index+1)%slides.length;showSlide()});
+ modal.addEventListener('close',()=>{slides=null;next.hidden=true});
  const setups=[
   {selector:'.ai-neon-stack',counter:'.ai-neon-counter',caption:'.ai-image-caption',first:'ネオンの街並み',second:'青いネオンの飲食店'},
   {selector:'.ai-travel-stack',counter:'.ai-travel-counter',caption:'.ai-travel-caption',first:'TOKYO',second:'TONAMI'}
@@ -18,23 +38,26 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
   const card=stack.closest('.ai-image-card');
   const count=card.querySelector(counter);
   const note=card.querySelector(caption);
-  let swapped=false;
+  const images=[stack.querySelector('.ai-travel-front, .ai-neon-front'),stack.querySelector('.ai-travel-back, .ai-neon-back')];
+  let swapped=false,hoverTimer=null;
   const setSwapped=(value)=>{
-   swapped=value;
-   stack.classList.toggle('is-swapped',swapped);
+   swapped=value;stack.classList.toggle('is-swapped',swapped);
    if(count)count.textContent=swapped?'02 / 02':'01 / 02';
    if(note)note.textContent=(swapped?second:first)+' · マウスを重ねると画像が切り替わります';
    stack.setAttribute('aria-label','表示中の'+(swapped?second:first)+'の画像を拡大して見る');
   };
-  stack.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'||e.pointerType==='pen')setSwapped(true)});
-  stack.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'||e.pointerType==='pen')setSwapped(false)});
+  stack.addEventListener('pointerenter',e=>{
+   if(e.pointerType!=='mouse'&&e.pointerType!=='pen')return;
+   clearTimeout(hoverTimer);
+   hoverTimer=setTimeout(()=>setSwapped(true),1300);
+  });
+  stack.addEventListener('pointerleave',e=>{
+   if(e.pointerType!=='mouse'&&e.pointerType!=='pen')return;
+   clearTimeout(hoverTimer);setSwapped(false);
+  });
   stack.addEventListener('click',()=>{
-   const current=stack.querySelector(swapped?'.ai-travel-back, .ai-neon-back':'.ai-travel-front, .ai-neon-front');
-   if(!current)return;
-   const img=document.createElement('img');
-   img.src=current.currentSrc||current.src;img.alt=current.alt;img.decoding='async';
-   document.querySelector('#modal-media').replaceChildren(img);
-   document.querySelector('#lightbox').showModal();
+   clearTimeout(hoverTimer);
+   openSlides(images,swapped?1:0);
   });
  });
 })();
