@@ -23,11 +23,11 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
  };
  const openSlides=(images,initial)=>{
   slides=images;index=initial;showSlide();
-  next.hidden=images.length<2;
+  next.hidden=images.length<2;next.style.display=images.length>1?'grid':'none';
   modal.showModal();
  };
  next.addEventListener('click',()=>{if(!slides)return;index=(index+1)%slides.length;showSlide()});
- modal.addEventListener('close',()=>{slides=null;next.hidden=true});
+ modal.addEventListener('close',()=>{slides=null;next.hidden=true;next.style.display='none'});
  const setups=[
   {selector:'.ai-neon-stack',counter:'.ai-neon-counter',caption:'.ai-image-caption',first:'ネオンの街並み',second:'青いネオンの飲食店'},
   {selector:'.ai-travel-stack',counter:'.ai-travel-counter',caption:'.ai-travel-caption',first:'TOKYO',second:'TONAMI'}
@@ -49,7 +49,7 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
   stack.addEventListener('pointerenter',e=>{
    if(e.pointerType!=='mouse'&&e.pointerType!=='pen')return;
    clearTimeout(hoverTimer);
-   hoverTimer=setTimeout(()=>setSwapped(true),1300);
+   hoverTimer=setTimeout(()=>setSwapped(true),3200);
   });
   stack.addEventListener('pointerleave',e=>{
    if(e.pointerType!=='mouse'&&e.pointerType!=='pen')return;
