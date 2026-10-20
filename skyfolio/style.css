@@ -756,3 +756,23 @@
 #lightbox .lightbox-next:not([hidden]):hover{background:#e4f3fb;transform:translateY(-50%) scale(1.06)}
 #lightbox .lightbox-next:focus-visible{outline:3px solid #7cbde0;outline-offset:3px}
 @media(max-width:600px){#lightbox .lightbox-next:not([hidden]){right:10px;width:42px;height:42px;font-size:22px}}
+
+/* Always show the next-image arrow in the middle of the right edge of the fullscreen viewer. */
+#lightbox[open] #lightbox-next:not([hidden]){
+ display:grid!important;visibility:visible!important;opacity:1!important;
+ position:fixed!important;right:clamp(16px,3vw,50px)!important;
+ top:50%!important;left:auto!important;bottom:auto!important;
+ transform:translateY(-50%)!important;
+ z-index:2147483647!important;width:54px!important;height:54px!important;
+ padding:0!important;place-items:center!important;
+ border:0!important;border-radius:50%!important;
+ background:#fff!important;color:#173b53!important;
+ font-size:29px!important;font-weight:700!important;
+ box-shadow:0 5px 18px rgba(0,0,0,.25)!important;cursor:pointer!important;
+}
+#lightbox[open] #lightbox-next:not([hidden]):hover{background:#e4f3fb!important}
+#lightbox[open] #modal-media{padding-right:clamp(24px,5vw,85px)!important;padding-left:clamp(24px,5vw,85px)!important;box-sizing:border-box!important}
+@media(max-width:600px){
+ #lightbox[open] #lightbox-next:not([hidden]){right:9px!important;width:44px!important;height:44px!important;font-size:23px!important}
+ #lightbox[open] #modal-media{padding-left:15px!important;padding-right:15px!important}
+}
