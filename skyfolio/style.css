@@ -1099,3 +1099,17 @@
   transform-origin:right center!important;
  }
 }
+
+/* Align the enlarged Lumiere cover's visible top with the other AI artworks.
+   Move its title/caption down together, without shifting the other cards. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image{
+  margin-top:73px!important;
+  margin-bottom:73px!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .work-info,
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-image-caption{
+  position:relative!important;
+  top:0!important;
+ }
+}
