@@ -1051,3 +1051,23 @@
  margin-top:10px!important;padding:12px 14px!important;
  font-size:12px!important;line-height:1.8!important;
 }
+
+/* Match the supplied small outlined "詳細を見る" pill exactly on Kate Spade. */
+#ai-image .ai-kate-card .ai-kate-details>summary{
+ display:inline-flex!important;justify-content:center!important;align-items:center!important;
+ width:auto!important;min-width:96px!important;height:34px!important;min-height:34px!important;
+ padding:0 13px!important;gap:0!important;box-sizing:border-box!important;
+ border:1px solid #b6d4e4!important;border-radius:999px!important;
+ background:#f8fcff!important;color:#527e9b!important;
+ font-size:12px!important;font-weight:400!important;letter-spacing:0!important;
+ box-shadow:none!important;
+}
+#ai-image .ai-kate-card .ai-kate-details>summary .ai-video-details-label{
+ font-size:12px!important;font-weight:400!important;letter-spacing:0!important;
+}
+#ai-image .ai-kate-card .ai-kate-details>summary .ai-video-details-icon{
+ display:none!important;
+}
+#ai-image .ai-kate-card .ai-kate-details>summary:hover{
+ background:#edf7fc!important;border-color:#9bbfd3!important;
+}
