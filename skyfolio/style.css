@@ -1071,3 +1071,13 @@
 #ai-image .ai-kate-card .ai-kate-details>summary:hover{
  background:#edf7fc!important;border-color:#9bbfd3!important;
 }
+
+/* Kate Spade details: plain text like 恋する惑星, without a surrounding panel. */
+#ai-image .ai-kate-card .ai-kate-details>.ai-video-details-content{
+ border:none!important;
+ border-radius:0!important;
+ background:transparent!important;
+ box-shadow:none!important;
+ padding:0!important;
+ margin-top:12px!important;
+}
