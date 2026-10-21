@@ -1002,3 +1002,28 @@
 #ai-image .ai-image-grid .ai-travel-stack>img{
  cursor:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='12'%20cy='12'%20r='9.5'%20fill='white'%20fill-opacity='.92'%20stroke='%2391b5c8'%20stroke-width='1'/%3E%3Ccircle%20cx='12'%20cy='12'%20r='6.5'%20fill='none'%20stroke='%237b9db1'%20stroke-width='1.1'/%3E%3Cpath%20d='M17%2017%20L24%2024'%20fill='none'%20stroke='%237b9db1'%20stroke-width='1.8'%20stroke-linecap='round'/%3E%3Cpath%20d='M12%205%20Q12.8%2011.2%2019%2012%20Q12.8%2012.8%2012%2019%20Q11.2%2012.8%205%2012%20Q11.2%2011.2%2012%205Z'%20fill='none'%20stroke='%237b9db1'%20stroke-width='.8'/%3E%3C/svg%3E") 12 12,pointer!important;
 }
+
+/* Smaller Da Nang-style expandable details for the neon photo project. */
+#ai-image .ai-neon-card .ai-neon-details{
+ margin-top:11px!important;
+ border:0!important;background:transparent!important;
+}
+#ai-image .ai-neon-card .ai-neon-details>summary{
+ display:inline-flex!important;align-items:center!important;gap:9px!important;
+ width:auto!important;min-height:0!important;padding:7px 12px!important;
+ border:1px solid rgba(110,151,175,.42)!important;border-radius:22px!important;
+ background:rgba(247,252,255,.8)!important;color:#557d96!important;
+ font-size:12px!important;font-weight:500!important;line-height:1.5!important;
+ cursor:pointer!important;list-style:none!important;
+}
+#ai-image .ai-neon-card .ai-neon-details>summary::-webkit-details-marker{display:none}
+#ai-image .ai-neon-card .ai-neon-details>summary:hover{
+ background:#edf6fb!important;border-color:#91b5c8!important;
+}
+#ai-image .ai-neon-card .ai-neon-details .ai-video-details-label{
+ font-size:12px!important;letter-spacing:.02em!important;
+}
+#ai-image .ai-neon-card .ai-neon-details .ai-video-details-content{
+ margin-top:10px!important;padding:12px 14px!important;
+ font-size:12px!important;line-height:1.8!important;
+}
