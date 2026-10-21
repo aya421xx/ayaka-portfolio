@@ -49,7 +49,7 @@ const menu=document.querySelector('#menu');const nav=document.querySelector('#na
   stack.addEventListener('pointerenter',e=>{
    if(e.pointerType!=='mouse'&&e.pointerType!=='pen')return;
    clearTimeout(hoverTimer);
-   hoverTimer=setTimeout(()=>setSwapped(true),3200);
+   hoverTimer=setTimeout(()=>setSwapped(true),180);
   });
   stack.addEventListener('pointerleave',e=>{
    if(e.pointerType!=='mouse'&&e.pointerType!=='pen')return;
