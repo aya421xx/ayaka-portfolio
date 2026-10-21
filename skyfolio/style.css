@@ -1081,3 +1081,21 @@
  padding:0!important;
  margin-top:12px!important;
 }
+
+/* Enlarge magazine cover around 40%, keeping its right edge aligned to the
+   neighboring artwork and preserving the grid's column gaps. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image{
+  overflow:visible!important;
+  justify-content:flex-end!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image>img{
+  transform:translateX(0) scale(1.4)!important;
+  transform-origin:right center!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:hover>img,
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:focus-visible>img{
+  transform:translateX(0) scale(1.45)!important;
+  transform-origin:right center!important;
+ }
+}
