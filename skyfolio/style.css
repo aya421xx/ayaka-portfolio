@@ -1027,3 +1027,27 @@
  margin-top:10px!important;padding:12px 14px!important;
  font-size:12px!important;line-height:1.8!important;
 }
+
+/* Match Kate Spade's details toggle to the compact 恋する惑星 design. */
+#ai-image .ai-kate-card .ai-kate-details{margin-top:11px!important;border:0!important;background:transparent!important}
+#ai-image .ai-kate-card .ai-kate-details>summary{
+ display:inline-flex!important;align-items:center!important;gap:9px!important;
+ width:auto!important;min-height:0!important;padding:7px 12px!important;
+ border:1px solid rgba(110,151,175,.42)!important;border-radius:22px!important;
+ background:rgba(247,252,255,.8)!important;color:#557d96!important;
+ font-size:12px!important;font-weight:500!important;line-height:1.5!important;
+ box-shadow:none!important;transform:none!important;list-style:none!important;
+}
+#ai-image .ai-kate-card .ai-kate-details>summary:hover{background:#edf6fb!important;border-color:#91b5c8!important;box-shadow:none!important;transform:none!important}
+#ai-image .ai-kate-card .ai-kate-details>summary .ai-video-details-label{font-size:12px!important;letter-spacing:.02em!important}
+#ai-image .ai-kate-card .ai-kate-details>summary .ai-video-details-label::before{content:none!important}
+#ai-image .ai-kate-card .ai-kate-details>summary .ai-video-details-icon{
+ display:inline-block!important;width:auto!important;height:auto!important;
+ background:transparent!important;border-radius:0!important;
+}
+#ai-image .ai-kate-card .ai-kate-details>summary .ai-video-details-icon::before{content:""!important}
+#ai-image .ai-kate-card .ai-kate-details[open]>summary .ai-video-details-icon::before{content:""!important}
+#ai-image .ai-kate-card .ai-kate-details>.ai-video-details-content{
+ margin-top:10px!important;padding:12px 14px!important;
+ font-size:12px!important;line-height:1.8!important;
+}
