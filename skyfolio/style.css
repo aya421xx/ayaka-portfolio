@@ -1121,3 +1121,33 @@
  .profile-subtitle{font-size:12px}
  .profile-list{font-size:11px}
 }
+
+/* Desktop AI artwork: center the three featured pieces and restore even gutters. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid{
+  max-width:1080px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  column-gap:clamp(24px,3vw,42px)!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image{
+  overflow:hidden!important;
+  justify-content:center!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image>img{
+  transform:scale(.84)!important;
+  transform-origin:center center!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:hover>img,
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:focus-visible>img{
+  transform:scale(.875)!important;
+  transform-origin:center center!important;
+ }
+ #ai-image .ai-neon-card .ai-neon-vertical{transform:none!important}
+ #ai-image .ai-neon-card .work-info,
+ #ai-image .ai-neon-card .ai-image-caption{left:0!important;width:100%!important}
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{transform:none!important}
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img,
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:focus-visible>img{transform:scale(1.045)!important}
+}
