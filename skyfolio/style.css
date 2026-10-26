@@ -1208,11 +1208,11 @@
  }
 }
 
-/* AI Image: three equal columns, equal artwork tops and consistent gutters. */
+/* AI Image: balance visible gaps for two landscape columns and one portrait column. */
 @media(min-width:761px){
  #ai-image .ai-image-grid{
   display:grid!important;width:100%!important;max-width:none!important;
-  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.76fr)!important;
   gap:clamp(24px,2.6vw,42px)!important;
   align-items:start!important;margin:35px auto 0!important;
  }
