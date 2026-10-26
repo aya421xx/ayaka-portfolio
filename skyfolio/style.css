@@ -1227,3 +1227,8 @@
  .profile-image img{width:100%!important;height:auto!important}
  .profile-copy{min-width:0!important}
 }
+
+/* Center illustration against the text from プロフィール through the closing note. */
+@media(min-width:761px){
+ .profile-image{transform:translateY(42px)!important}
+}
