@@ -1258,3 +1258,51 @@
  .profile-layout{align-items:center!important}
  .profile-image{transform:none!important;align-self:center!important}
 }
+
+/* AI Image: three equal columns, equal artwork tops and consistent gutters. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid{
+  display:grid!important;width:100%!important;max-width:none!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:clamp(24px,2.6vw,42px)!important;
+  align-items:start!important;margin:35px auto 0!important;
+ }
+ #ai-image .ai-image-grid>.ai-image-card{
+  width:100%!important;min-width:0!important;margin:0!important;
+  transform:none!important;justify-self:stretch!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image,
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image,
+ #ai-image .ai-image-grid>.ai-neon-card .ai-neon-vertical{
+  width:100%!important;height:clamp(340px,36vw,520px)!important;
+  margin:0!important;padding:0!important;transform:none!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image,
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image{
+  display:flex!important;align-items:flex-start!important;
+  justify-content:center!important;overflow:hidden!important;
+  border-radius:12px!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image>img,
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{
+  display:block!important;width:auto!important;height:100%!important;
+  max-width:100%!important;max-height:100%!important;
+  object-fit:contain!important;object-position:top center!important;
+  transform:none!important;border-radius:12px!important;
+ }
+ #ai-image .ai-image-grid>.ai-neon-card .ai-neon-vertical{
+  display:grid!important;grid-template-rows:repeat(2,minmax(0,1fr))!important;
+  gap:clamp(12px,1.2vw,18px)!important;overflow:hidden!important;
+ }
+ #ai-image .ai-image-grid>.ai-neon-card .ai-neon-vertical>a{
+  display:block!important;min-height:0!important;height:100%!important;
+  width:100%!important;overflow:hidden!important;border-radius:12px!important;
+ }
+ #ai-image .ai-image-grid>.ai-neon-card .ai-neon-vertical>a>img{
+  display:block!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;border-radius:12px!important;
+ }
+ #ai-image .ai-image-grid>.ai-image-card>.work-info{
+  margin-top:18px!important;
+ }
+}
