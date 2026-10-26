@@ -1252,11 +1252,12 @@
 .profile-copy .profile-personal-note p{margin:0!important}
 .profile-copy .profile-personal-note p+p{margin-top:12px!important}
 
-/* Profile: tighten the space beneath the heading without altering content sizes. */
+/* Profile: place content immediately beneath the heading, not centered in a tall row. */
 @media(min-width:761px){
- .profile-heading{margin-bottom:8px!important}
- .profile-layout{align-items:center!important}
- .profile-image{transform:none!important;align-self:center!important}
+ .profile-heading{margin-bottom:18px!important}
+ .profile-layout{align-items:start!important}
+ .profile-copy{align-self:start!important}
+ .profile-image{align-self:start!important;transform:none!important;margin-top:clamp(42px,5vw,80px)!important}
 }
 
 /* AI Image: three equal columns, equal artwork tops and consistent gutters. */
