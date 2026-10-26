@@ -1151,3 +1151,45 @@
  #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img,
  #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:focus-visible>img{transform:scale(1.045)!important}
 }
+
+/* AI Image desktop: contained thumbnails, equal columns and centered gallery. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid{
+  width:min(100%,1080px)!important;
+  max-width:1080px!important;
+  margin:35px auto 0!important;
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:32px!important;
+  align-items:start!important;
+ }
+ #ai-image .ai-image-grid>.ai-image-card{min-width:0!important;overflow:visible!important}
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image,
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  height:420px!important;width:100%!important;overflow:hidden!important;
+  margin:0!important;padding:0!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image>img{
+  display:block!important;width:auto!important;height:auto!important;
+  max-width:90%!important;max-height:310px!important;
+  object-fit:contain!important;object-position:center!important;
+  transform:none!important;transform-origin:center!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:hover>img,
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:focus-visible>img{
+  transform:scale(1.035)!important;
+ }
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{
+  max-width:100%!important;max-height:420px!important;height:auto!important;
+  transform:none!important;
+ }
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image:hover>img{transform:scale(1.035)!important}
+ #ai-image .ai-image-grid>.ai-neon-card .ai-neon-vertical{
+  transform:none!important;width:100%!important;
+ }
+ #ai-image .ai-image-grid>.ai-neon-card .work-info,
+ #ai-image .ai-image-grid>.ai-neon-card .ai-image-caption{
+  left:0!important;width:100%!important;
+ }
+}
