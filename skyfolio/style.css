@@ -1210,3 +1210,20 @@
 
 /* Restore vertically centered Profile illustration beside the full text column. */
 @media(min-width:761px){.profile-layout{align-items:center!important}.profile-image{align-self:center!important}}
+
+/* Profile desktop composition: balanced two-column proportions at 50%-100% zoom. */
+@media(min-width:761px){
+ .profile-section{max-width:1320px!important;padding:clamp(32px,4vw,58px)!important}
+ .profile-heading{margin-bottom:28px!important}
+ .profile-layout{
+  grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)!important;
+  gap:clamp(32px,4vw,58px)!important;
+  align-items:center!important;
+ }
+ .profile-image{
+  width:88%!important;max-width:500px!important;
+  justify-self:center!important;align-self:center!important;
+ }
+ .profile-image img{width:100%!important;height:auto!important}
+ .profile-copy{min-width:0!important}
+}
