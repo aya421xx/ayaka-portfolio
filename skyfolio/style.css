@@ -1229,3 +1229,24 @@
   width:100%!important;
  }
 }
+
+/* Compact Profile panel without changing image or text sizes. */
+@media(min-width:761px){
+ .profile-section{
+  max-width:1080px!important;
+  padding:clamp(24px,3.2vw,44px)!important;
+  margin-top:24px!important;
+  margin-bottom:48px!important;
+ }
+ .profile-heading{margin-bottom:16px!important}
+ .profile-layout{gap:clamp(16px,2vw,28px)!important}
+}
+@media(max-width:760px){
+ .profile-section{
+  padding:22px 18px!important;
+  margin-top:16px!important;
+  margin-bottom:36px!important;
+ }
+ .profile-heading{margin-bottom:18px!important}
+ .profile-layout{gap:18px!important}
+}
