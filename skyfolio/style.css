@@ -1250,3 +1250,26 @@
  .profile-heading{margin-bottom:18px!important}
  .profile-layout{gap:18px!important}
 }
+
+/* Profile content proportions for the compact blue panel. */
+@media(min-width:761px){
+ .profile-layout{
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;
+  gap:clamp(20px,2.5vw,34px)!important;
+  max-width:940px!important;
+ }
+ .profile-image{width:82%!important;max-width:360px!important;justify-self:center!important}
+ .profile-copy{font-size:85%!important;min-width:0!important}
+ .profile-copy h3 .name-en{font-size:clamp(2.35rem,3.5vw,3.7rem)!important}
+ .profile-copy h3 .name-ja{font-size:clamp(.75rem,1vw,.95rem)!important}
+ .profile-copy p{font-size:clamp(.75rem,.9vw,.85rem)!important;line-height:1.8!important;max-width:none!important}
+ .profile-subtitle{font-size:13px!important;margin:15px 0 6px!important}
+ .profile-list{font-size:12px!important;line-height:1.75!important}
+ .profile-personal-note{margin-top:16px!important;padding-top:12px!important;padding-bottom:12px!important}
+}
+@media(max-width:760px){
+ .profile-image{width:78%!important;max-width:330px!important}
+ .profile-copy h3 .name-en{font-size:clamp(2.2rem,8vw,3.25rem)!important}
+ .profile-copy p{font-size:.8rem!important;line-height:1.85!important}
+ .profile-subtitle{margin:15px 0 6px!important}
+}
