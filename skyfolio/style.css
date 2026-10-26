@@ -1255,3 +1255,15 @@
   margin-top:18px!important;
  }
 }
+
+/* Desktop Profile: align name higher and finish biography at image bottom. */
+@media(min-width:761px){
+ #profile .profile-layout{align-items:start!important}
+ #profile .profile-copy{align-self:start!important}
+ #profile .profile-copy h3{margin-top:5px!important;margin-bottom:14px!important}
+ #profile .profile-copy .profile-subtitle{margin-top:15px!important;margin-bottom:6px!important}
+ #profile .profile-copy p{line-height:1.7!important}
+ #profile .profile-copy .profile-list{line-height:1.65!important;margin-top:5px!important;margin-bottom:9px!important}
+ #profile .profile-copy .profile-personal-note{margin-top:13px!important;padding-top:11px!important;padding-bottom:11px!important}
+ #profile .profile-copy .profile-personal-note p+p{margin-top:7px!important}
+}
