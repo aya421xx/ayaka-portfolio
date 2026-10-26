@@ -1267,3 +1267,11 @@
  #profile .profile-copy .profile-personal-note{margin-top:13px!important;padding-top:11px!important;padding-bottom:11px!important}
  #profile .profile-copy .profile-personal-note p+p{margin-top:7px!important}
 }
+
+/* Final visible spacing correction: portrait starts at the third column edge. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid{column-gap:clamp(24px,2.8vw,52px)!important}
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image{
+  justify-content:flex-start!important;
+ }
+}
