@@ -1207,3 +1207,6 @@
   width:100%!important;
  }
 }
+
+/* Restore vertically centered Profile illustration beside the full text column. */
+@media(min-width:761px){.profile-layout{align-items:center!important}.profile-image{align-self:center!important}}
