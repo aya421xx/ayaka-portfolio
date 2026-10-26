@@ -1232,3 +1232,27 @@
 @media(min-width:761px){
  .profile-image{transform:translateY(42px)!important}
 }
+
+/* Profile biography typography: consistent hierarchy, rhythm, and alignment. */
+.profile-copy .profile-subtitle{
+ font-size:16px!important;font-weight:600!important;line-height:1.5!important;
+ margin:24px 0 10px!important;
+}
+.profile-copy>p,
+.profile-copy .profile-list,
+.profile-copy .profile-personal-note p{
+ font-size:15px!important;font-weight:400!important;line-height:1.9!important;
+ letter-spacing:normal!important;
+}
+.profile-copy>p{max-width:none!important;margin:0!important}
+.profile-copy .profile-list{
+ list-style:none!important;padding-left:0!important;margin:0!important;
+}
+.profile-copy .profile-list li{margin:0 0 4px!important;padding:0!important}
+.profile-copy .profile-list li::marker{content:""!important}
+.profile-copy .profile-personal-note{
+ margin-top:24px!important;padding:18px 0!important;
+ background:none!important;
+}
+.profile-copy .profile-personal-note p{margin:0!important}
+.profile-copy .profile-personal-note p+p{margin-top:12px!important}
