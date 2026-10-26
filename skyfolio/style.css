@@ -1193,3 +1193,39 @@
   left:0!important;width:100%!important;
  }
 }
+
+/* AI Image desktop layout: use available section width and consistent artwork height. */
+@media(min-width:761px){
+ #ai-image .ai-image-grid{
+  width:100%!important;max-width:none!important;
+  margin:35px auto 0!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  column-gap:clamp(20px,2.5vw,38px)!important;
+  row-gap:30px!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image,
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image{
+  height:clamp(340px,36vw,520px)!important;
+  overflow:hidden!important;justify-content:center!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image>img{
+  width:auto!important;height:100%!important;
+  max-width:100%!important;max-height:100%!important;
+  object-fit:contain!important;transform:none!important;
+ }
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:hover>img,
+ #ai-image .ai-image-grid>.ai-magazine-card .ai-magazine-image:focus-visible>img{
+  transform:scale(1.025)!important;
+ }
+ #ai-image .ai-image-grid>.ai-kate-card .ai-kate-image>img{
+  width:auto!important;height:100%!important;max-height:100%!important;
+  max-width:100%!important;object-fit:contain!important;
+ }
+ #ai-image .ai-image-grid>.ai-neon-card .ai-neon-vertical{
+  width:100%!important;transform:none!important;
+  gap:clamp(12px,1.2vw,18px)!important;
+ }
+ #ai-image .ai-image-grid>.ai-neon-card .ai-neon-vertical a{
+  width:100%!important;
+ }
+}
