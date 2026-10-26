@@ -1208,58 +1208,6 @@
  }
 }
 
-/* Restore vertically centered Profile illustration beside the full text column. */
-@media(min-width:761px){.profile-layout{align-items:center!important}.profile-image{align-self:center!important}}
-
-/* Profile desktop composition: balanced two-column proportions at 50%-100% zoom. */
-@media(min-width:761px){
- .profile-section{max-width:1320px!important;padding:clamp(32px,4vw,58px)!important}
- .profile-heading{margin-bottom:28px!important}
- .profile-layout{
-  grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)!important;
-  gap:clamp(32px,4vw,58px)!important;
-  align-items:center!important;
- }
- .profile-image{
-  width:88%!important;max-width:500px!important;
-  justify-self:center!important;align-self:center!important;
- }
- .profile-image img{width:100%!important;height:auto!important}
- .profile-copy{min-width:0!important}
-}
-
-/* Profile biography typography: consistent hierarchy, rhythm, and alignment. */
-.profile-copy .profile-subtitle{
- font-size:16px!important;font-weight:600!important;line-height:1.5!important;
- margin:24px 0 10px!important;
-}
-.profile-copy>p,
-.profile-copy .profile-list,
-.profile-copy .profile-personal-note p{
- font-size:15px!important;font-weight:400!important;line-height:1.9!important;
- letter-spacing:normal!important;
-}
-.profile-copy>p{max-width:none!important;margin:0!important}
-.profile-copy .profile-list{
- list-style:none!important;padding-left:0!important;margin:0!important;
-}
-.profile-copy .profile-list li{margin:0 0 4px!important;padding:0!important}
-.profile-copy .profile-list li::marker{content:""!important}
-.profile-copy .profile-personal-note{
- margin-top:24px!important;padding:18px 0!important;
- background:none!important;
-}
-.profile-copy .profile-personal-note p{margin:0!important}
-.profile-copy .profile-personal-note p+p{margin-top:12px!important}
-
-/* Profile: place content immediately beneath the heading, not centered in a tall row. */
-@media(min-width:761px){
- .profile-heading{margin-bottom:18px!important}
- .profile-layout{align-items:start!important}
- .profile-copy{align-self:start!important}
- .profile-image{align-self:start!important;transform:none!important;margin-top:clamp(42px,5vw,80px)!important}
-}
-
 /* AI Image: three equal columns, equal artwork tops and consistent gutters. */
 @media(min-width:761px){
  #ai-image .ai-image-grid{
