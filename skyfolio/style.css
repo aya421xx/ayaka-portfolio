@@ -1281,3 +1281,58 @@
   .hero .hero-art { padding-left: 0; }
   .hero .hero-frame { transform: translateY(38px) rotate(3deg) scale(1.12); transform-origin: center center; }
 }
+
+/* Responsive AI Image gallery: visible edges follow the grid columns. */
+@media (min-width: 761px) {
+  #ai-image .ai-image-grid {
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,.72fr) !important;
+    column-gap: clamp(18px,2.4vw,40px) !important;
+    row-gap: 24px !important;
+    align-items: start !important;
+  }
+  #ai-image .ai-image-grid > .ai-image-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    justify-self: stretch !important;
+  }
+  #ai-image .ai-image-grid > .ai-magazine-card .ai-magazine-image,
+  #ai-image .ai-image-grid > .ai-kate-card .ai-kate-image {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    transform: none !important;
+  }
+  #ai-image .ai-image-grid > .ai-magazine-card .ai-magazine-image > img,
+  #ai-image .ai-image-grid > .ai-kate-card .ai-kate-image > img {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    border-radius: 12px !important;
+  }
+  #ai-image .ai-image-grid > .ai-neon-card .ai-neon-vertical {
+    width: 100% !important;
+    height: auto !important;
+    display: grid !important;
+    grid-template-rows: none !important;
+    grid-auto-rows: auto !important;
+    gap: clamp(12px,1.2vw,18px) !important;
+  }
+  #ai-image .ai-image-grid > .ai-neon-card .ai-neon-vertical > a {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1.92 / 1 !important;
+    overflow: hidden !important;
+  }
+  #ai-image .ai-image-grid > .ai-neon-card .ai-neon-vertical > a > img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
