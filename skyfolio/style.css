@@ -1336,3 +1336,13 @@
     object-fit: cover !important;
   }
 }
+
+/* Japanese phrase-aware wrapping in Profile */
+#profile .profile-copy p,
+#profile .profile-copy .profile-list li {
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-break: strict;
+  word-break: auto-phrase;
+  text-wrap: pretty;
+}
