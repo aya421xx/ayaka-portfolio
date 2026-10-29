@@ -1279,7 +1279,7 @@
 /* Hero collage size adjustment, desktop only */
 @media (min-width: 761px) {
   .hero .hero-art { padding-left: 0; }
-  .hero .hero-frame { transform: translateY(38px) rotate(3deg) scale(1.12); transform-origin: center center; }
+  .hero .hero-frame { transform: translate(-30px, 38px) rotate(3deg) scale(1.12); transform-origin: center center; }
 }
 
 /* Responsive AI Image gallery: visible edges follow the grid columns. */
