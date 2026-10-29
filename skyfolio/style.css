@@ -1346,3 +1346,14 @@
   word-break: auto-phrase;
   text-wrap: pretty;
 }
+
+/* Compact web-page preview under the Chungking Express artwork details */
+#ai-image .ai-neon-card .koi-page-preview{margin-top:18px;width:100%;max-width:100%}
+#ai-image .ai-neon-card .koi-page-preview-link{display:flex;align-items:center;gap:13px;padding:11px;border:1px solid rgba(91,148,181,.25);border-radius:12px;background:rgba(255,255,255,.65);color:#234a62;text-decoration:none;transition:background .2s,border-color .2s}
+#ai-image .ai-neon-card .koi-page-preview-link:hover{background:#fff;border-color:rgba(74,135,173,.5)}
+#ai-image .ai-neon-card .koi-page-preview-link>img{display:block;flex:0 0 96px;width:96px;height:78px;object-fit:cover;border-radius:7px}
+#ai-image .ai-neon-card .koi-page-preview-text{display:flex;flex:1;min-width:0;flex-direction:column;gap:5px;text-align:left;line-height:1.4}
+#ai-image .ai-neon-card .koi-page-preview-text strong{font-size:14px;font-weight:600}
+#ai-image .ai-neon-card .koi-page-preview-text small{font-size:11px;color:#64859a}
+#ai-image .ai-neon-card .koi-page-preview-action{font-size:12px;color:#397da4}
+@media(max-width:480px){#ai-image .ai-neon-card .koi-page-preview-link{gap:10px;padding:9px}#ai-image .ai-neon-card .koi-page-preview-link>img{flex-basis:82px;width:82px;height:75px}}
