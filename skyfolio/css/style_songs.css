@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:#071824}
+.fay{background-image:url(../images/恋する惑星.nitta.png);background-size:cover;background-position:center;background-repeat:no-repeat;color:white;min-height:100vh;font-size:30px}
+.fay:hover{background-image:url(../images/koi-restaurant.png);transition:all 5s}
+.fay_lyrics{font-size:30px;color:white;padding:30px;text-align:center;max-width:1100px;margin:auto;overflow-wrap:anywhere;text-shadow:0 0 5px #ff66cc,0 0 10px #ff66cc,0 0 20px #ff1493,0 0 40px #ff1493,0 0 60px #ff1493}
+.korea{font-size:40px;padding:30px;font-family:"Dongle",sans-serif;color:white;text-shadow:0 0 5px #ff66cc,0 0 10px #ff66cc,0 0 20px #ff1493,0 0 40px #ff1493,0 0 60px #ff1493}
+.china{font-family:"ZCOOL XiaoWei",sans-serif}
+@media(max-width:700px){.fay{min-height:100svh}.fay_lyrics{font-size:20px;padding:24px 14px}.korea{font-size:30px;padding:8px}}
