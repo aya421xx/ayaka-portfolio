@@ -9,3 +9,6 @@ body{background:#071824}
 .korea{font-size:40px;padding:30px;font-family:"Dongle",sans-serif;color:white;text-shadow:0 0 5px #ff66cc,0 0 10px #ff66cc,0 0 20px #ff1493,0 0 40px #ff1493,0 0 60px #ff1493}
 .china{font-family:"ZCOOL XiaoWei",sans-serif}
 @media(max-width:700px){.fay{min-height:100svh}.fay_lyrics{font-size:20px;padding:24px 14px}.korea{font-size:30px;padding:8px}}
+/* Center the movie title and text vertically within the background */
+.fay { display: flex; align-items: center; justify-content: center; }
+.fay_lyrics { width: 100%; }
